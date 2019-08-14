@@ -16,3 +16,7 @@ This site is deployed to GitHub Pages
 ``` bash
 $ yarn deploy
 ```
+
+## Credit
+
+These docs are a blatant copy and modification of the excellent VueJS docs - https://github.com/vuejs/vuejs.org
