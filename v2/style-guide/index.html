@@ -185,10 +185,39 @@
 <li>often find new hires are already accustomed to your preferred coding style, at least in regards to Vue</li>
 </ol>
 <h3 id="Priority-D-Use-with-Caution"><a href="#Priority-D-Use-with-Caution" class="headerlink" title="Priority D: Use with Caution"></a>Priority D: Use with Caution</h3><p>Potentially dangerous patterns</p>
-<h2 id="Priority-A-Rules-Essential-Error-Prevention"><a href="#Priority-A-Rules-Essential-Error-Prevention" class="headerlink" title="Priority A Rules: Essential (Error Prevention)"></a>Priority A Rules: Essential (Error Prevention)</h2><h3 id="Multi-word-component-names-essential"><a href="#Multi-word-component-names-essential" class="headerlink" title="Multi-word component names essential"></a>Multi-word component names <sup data-p="a">essential</sup></h3><p><strong>Component names should always be multi-word, except for root <code>App</code> components, and built-in components provided by Vue, such as <code>&lt;transition&gt;</code> or <code>&lt;component&gt;</code>.</strong></p>
+<h2 id="Priority-A-Rules-Essential-Error-Prevention"><a href="#Priority-A-Rules-Essential-Error-Prevention" class="headerlink" title="Priority A Rules: Essential (Error Prevention)"></a>Priority A Rules: Essential (Error Prevention)</h2><h3 id="Variable-naming"><a href="#Variable-naming" class="headerlink" title="Variable naming"></a>Variable naming</h3><p>Naming things in software development is difficult.</p>
+<p>Whether it is class names or function names, coming up with meaningful names allows the reader to infer intent at a glance.</p>
+<p>Fortunately, the naming of variables, and to some extent parameters, should not suffer from a naming choice thought process most of the time.</p>
+<p>This is because the name of the variable is built into the class/object type</p>
+<p>Variables should most likely be common nouns.</p>
+<p>If you can’t use them in a sentence or using them in a sentence causes it to become complicated, then it is a bad name. E.g.</p>
+<ul>
+<li>Show me the “amount” //BAD, not descriptive enough</li>
+<li>Show me the “withdrawalAmount” //GOOD</li>
+</ul>
+<div class="style-example example-bad">
+<h4 id="Bad"><a href="#Bad" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js"><span class="hljs-keyword">var</span> invoice = <span class="hljs-keyword">new</span> Order();
+<span class="hljs-keyword">var</span> list = <span class="hljs-keyword">new</span> List&lt;Order&gt;();</code></pre>
+<pre><code class="hljs js"><span class="hljs-comment">// Do not use faux abbrevitions/shortened words</span>
+<span class="hljs-keyword">var</span> ord = <span class="hljs-keyword">new</span> Order(); 
+<span class="hljs-keyword">var</span> img = <span class="hljs-keyword">new</span> Image();
+<span class="hljs-keyword">var</span> num = <span class="hljs-number">123</span>;</code></pre>
+<pre><code class="hljs js"><span class="hljs-keyword">var</span> fred = <span class="hljs-keyword">new</span> Dog();</code></pre>
+<pre><code class="hljs js"><span class="hljs-comment">// This is an obvious sign that the method/function is way to complicated and needs to be refactored into multiple methods</span>
+<span class="hljs-keyword">var</span> supplimentaryBenefitOfFirstSupplimentaryBenefit = benefit.children[<span class="hljs-number">0</span>].children[<span class="hljs-number">0</span>];</code></pre>
+<pre><code class="hljs js"><span class="hljs-comment">// While grammatically correct, we can probably file this under “being clever”</span>
+<span class="hljs-keyword">var</span> school  = <span class="hljs-keyword">new</span> List&lt;Fish&gt;();</code></pre>
+</div>
+<div class="style-example example-good">
+<h4 id="Good"><a href="#Good" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js"><span class="hljs-keyword">var</span> order = <span class="hljs-keyword">new</span> Order();
+<span class="hljs-keyword">var</span> dog = <span class="hljs-keyword">new</span> Dog();</code></pre>
+<pre><code class="hljs js"><span class="hljs-keyword">var</span> orders = <span class="hljs-keyword">new</span> List&lt;Order&gt;();
+<span class="hljs-keyword">var</span> people = <span class="hljs-keyword">new</span> List&lt;Person&gt;();</code></pre>
+</div>
+<h3 id="Multi-word-component-names-essential"><a href="#Multi-word-component-names-essential" class="headerlink" title="Multi-word component names essential"></a>Multi-word component names <sup data-p="a">essential</sup></h3><p><strong>Component names should always be multi-word, except for root <code>App</code> components, and built-in components provided by Vue, such as <code>&lt;transition&gt;</code> or <code>&lt;component&gt;</code>.</strong></p>
 <p>This <a href="http://w3c.github.io/webcomponents/spec/custom/#valid-custom-element-name" target="_blank" rel="noopener">prevents conflicts</a> with existing and future HTML elements, since all HTML elements are a single word.</p>
 <div class="style-example example-bad">
-<h4 id="Bad"><a href="#Bad" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'todo'</span>, &#123;
+<h4 id="Bad-1"><a href="#Bad-1" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'todo'</span>, &#123;
   <span class="hljs-comment">// ...</span>
 &#125;)</code></pre>
 <pre><code class="hljs js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
@@ -197,7 +226,7 @@
 &#125;</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good"><a href="#Good" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'todo-item'</span>, &#123;
+<h4 id="Good-1"><a href="#Good-1" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'todo-item'</span>, &#123;
   <span class="hljs-comment">// ...</span>
 &#125;)</code></pre>
 <pre><code class="hljs js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
@@ -228,7 +257,7 @@
 &#125;</code></pre>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-1"><a href="#Bad-1" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'some-comp'</span>, &#123;
+<h4 id="Bad-2"><a href="#Bad-2" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'some-comp'</span>, &#123;
   <span class="hljs-attr">data</span>: &#123;
     <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'</span>
   &#125;
@@ -240,7 +269,7 @@
 &#125;</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-1"><a href="#Good-1" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'some-comp'</span>, &#123;
+<h4 id="Good-2"><a href="#Good-2" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'some-comp'</span>, &#123;
   <span class="hljs-attr">data</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
     <span class="hljs-keyword">return</span> &#123;
       <span class="hljs-attr">foo</span>: <span class="hljs-string">'bar'</span>
@@ -279,11 +308,11 @@
 </ul>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-2"><a href="#Bad-2" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js"><span class="hljs-comment">// This is only OK when prototyping</span>
+<h4 id="Bad-3"><a href="#Bad-3" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js"><span class="hljs-comment">// This is only OK when prototyping</span>
 props: [<span class="hljs-string">'status'</span>]</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-2"><a href="#Good-2" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">props: &#123;
+<h4 id="Good-3"><a href="#Good-3" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">props: &#123;
   <span class="hljs-attr">status</span>: <span class="hljs-built_in">String</span>
 &#125;</code></pre>
 <pre><code class="hljs js"><span class="hljs-comment">// Even better!</span>
@@ -330,14 +359,14 @@ props: &#123;
 <p>In our experience, it’s better to <em>always</em> add a unique key, so that you and your team simply never have to worry about these edge cases. Then in the rare, performance-critical scenarios where object constancy isn’t necessary, you can make a conscious exception.</p>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-3"><a href="#Bad-3" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+<h4 id="Bad-4"><a href="#Bad-4" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"todo in todos"</span>&gt;</span>
     &#123;&#123; todo.text &#125;&#125;
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-3"><a href="#Good-3" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+<h4 id="Good-4"><a href="#Good-4" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>
     <span class="hljs-attr">v-for</span>=<span class="hljs-string">"todo in todos"</span>
     <span class="hljs-attr">:key</span>=<span class="hljs-string">"todo.id"</span>
@@ -421,7 +450,7 @@ props: &#123;
 <p>By moving the <code>v-if</code> to a container element, we’re no longer checking <code>shouldShowUsers</code> for <em>every</em> user in the list. Instead, we check it once and don’t even evaluate the <code>v-for</code> if <code>shouldShowUsers</code> is false.</p>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-4"><a href="#Bad-4" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+<h4 id="Bad-5"><a href="#Bad-5" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>
     <span class="hljs-attr">v-for</span>=<span class="hljs-string">"user in users"</span>
     <span class="hljs-attr">v-if</span>=<span class="hljs-string">"user.isActive"</span>
@@ -441,7 +470,7 @@ props: &#123;
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-4"><a href="#Good-4" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+<h4 id="Good-5"><a href="#Good-5" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span>
     <span class="hljs-attr">v-for</span>=<span class="hljs-string">"user in activeUsers"</span>
     <span class="hljs-attr">:key</span>=<span class="hljs-string">"user.id"</span>
@@ -472,7 +501,7 @@ props: &#123;
 <p>Beyond the <code>scoped</code> attribute, using unique class names can help ensure that 3rd-party CSS does not apply to your own HTML. For example, many projects use the <code>button</code>, <code>btn</code>, or <code>icon</code> class names, so even if not using a strategy such as BEM, adding an app-specific and/or component-specific prefix (e.g. <code>ButtonClose-icon</code>) can provide some protection.</p>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-5"><a href="#Bad-5" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<h4 id="Bad-6"><a href="#Bad-6" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-close"</span>&gt;</span>X<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
@@ -483,7 +512,7 @@ props: &#123;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-5"><a href="#Good-5" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<h4 id="Good-6"><a href="#Good-6" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button-close"</span>&gt;</span>X<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
@@ -541,7 +570,7 @@ props: &#123;
 <p>Instead, we recommend combining the two prefixes into <code>$_</code>, as a convention for user-defined private properties that guarantee no conflicts with Vue.</p>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-6"><a href="#Bad-6" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js"><span class="hljs-keyword">var</span> myGreatMixin = &#123;
+<h4 id="Bad-7"><a href="#Bad-7" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js"><span class="hljs-keyword">var</span> myGreatMixin = &#123;
   <span class="hljs-comment">// ...</span>
   methods: &#123;
     <span class="hljs-attr">update</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
@@ -575,7 +604,7 @@ props: &#123;
 &#125;</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-6"><a href="#Good-6" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js"><span class="hljs-keyword">var</span> myGreatMixin = &#123;
+<h4 id="Good-7"><a href="#Good-7" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js"><span class="hljs-keyword">var</span> myGreatMixin = &#123;
   <span class="hljs-comment">// ...</span>
   methods: &#123;
     <span class="hljs-attr">$_myGreatMixin_update</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
@@ -603,7 +632,7 @@ props: &#123;
 <h2 id="Priority-B-Rules-Strongly-Recommended-Improving-Readability"><a href="#Priority-B-Rules-Strongly-Recommended-Improving-Readability" class="headerlink" title="Priority B Rules: Strongly Recommended (Improving Readability)"></a>Priority B Rules: Strongly Recommended (Improving Readability)</h2><h3 id="Component-files-strongly-recommended"><a href="#Component-files-strongly-recommended" class="headerlink" title="Component files strongly recommended"></a>Component files <sup data-p="b">strongly recommended</sup></h3><p><strong>Whenever a build system is available to concatenate files, each component should be in its own file.</strong></p>
 <p>This helps you to more quickly find a component when you need to edit it or review how to use it.</p>
 <div class="style-example example-bad">
-<h4 id="Bad-7"><a href="#Bad-7" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'TodoList'</span>, &#123;
+<h4 id="Bad-8"><a href="#Bad-8" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'TodoList'</span>, &#123;
   <span class="hljs-comment">// ...</span>
 &#125;)
 
@@ -612,7 +641,7 @@ Vue.component(<span class="hljs-string">'TodoItem'</span>, &#123;
 &#125;)</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-7"><a href="#Good-7" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
+<h4 id="Good-8"><a href="#Good-8" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
 |- TodoList.js
 |- TodoItem.js</code></pre>
 <pre><code class="hljs undefined">components/
@@ -622,13 +651,13 @@ Vue.component(<span class="hljs-string">'TodoItem'</span>, &#123;
 <h3 id="Single-file-component-filename-casing-strongly-recommended"><a href="#Single-file-component-filename-casing-strongly-recommended" class="headerlink" title="Single-file component filename casing strongly recommended"></a>Single-file component filename casing <sup data-p="b">strongly recommended</sup></h3><p><strong>Filenames of <a href="../guide/single-file-components.html">single-file components</a> should either be always PascalCase or always kebab-case.</strong></p>
 <p>PascalCase works best with autocompletion in code editors, as it’s consistent with how we reference components in JS(X) and templates, wherever possible. However, mixed case filenames can sometimes create issues on case-insensitive file systems, which is why kebab-case is also perfectly acceptable.</p>
 <div class="style-example example-bad">
-<h4 id="Bad-8"><a href="#Bad-8" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
+<h4 id="Bad-9"><a href="#Bad-9" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
 |- mycomponent.vue</code></pre>
 <pre><code class="hljs undefined">components/
 |- myComponent.vue</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-8"><a href="#Good-8" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
+<h4 id="Good-9"><a href="#Good-9" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
 |- MyComponent.vue</code></pre>
 <pre><code class="hljs undefined">components/
 |- my-component.vue</code></pre>
@@ -670,13 +699,13 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 </ul>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-9"><a href="#Bad-9" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
+<h4 id="Bad-10"><a href="#Bad-10" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
 |- MyButton.vue
 |- VueTable.vue
 |- Icon.vue</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-9"><a href="#Good-9" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
+<h4 id="Good-10"><a href="#Good-10" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
 |- BaseButton.vue
 |- BaseTable.vue
 |- BaseIcon.vue</code></pre>
@@ -692,12 +721,12 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 <h3 id="Single-instance-component-names-strongly-recommended"><a href="#Single-instance-component-names-strongly-recommended" class="headerlink" title="Single-instance component names strongly recommended"></a>Single-instance component names <sup data-p="b">strongly recommended</sup></h3><p><strong>Components that should only ever have a single active instance should begin with the <code>The</code> prefix, to denote that there can be only one.</strong></p>
 <p>This does not mean the component is only used in a single page, but it will only be used once <em>per page</em>. These components never accept any props, since they are specific to your app, not their context within your app. If you find the need to add props, it’s a good indication that this is actually a reusable component that is only used once per page <em>for now</em>.</p>
 <div class="style-example example-bad">
-<h4 id="Bad-10"><a href="#Bad-10" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
+<h4 id="Bad-11"><a href="#Bad-11" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
 |- Heading.vue
 |- MySidebar.vue</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-10"><a href="#Good-10" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
+<h4 id="Good-11"><a href="#Good-11" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
 |- TheHeading.vue
 |- TheSidebar.vue</code></pre>
 </div>
@@ -730,7 +759,7 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 </ul>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-11"><a href="#Bad-11" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
+<h4 id="Bad-12"><a href="#Bad-12" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
 |- TodoList.vue
 |- TodoItem.vue
 |- TodoButton.vue</code></pre>
@@ -739,7 +768,7 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 |- NavigationForSearchSidebar.vue</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-11"><a href="#Good-11" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
+<h4 id="Good-12"><a href="#Good-12" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
 |- TodoList.vue
 |- TodoListItem.vue
 |- TodoListItemButton.vue</code></pre>
@@ -790,7 +819,7 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 </ul>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-12"><a href="#Bad-12" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
+<h4 id="Bad-13"><a href="#Bad-13" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
 |- ClearSearchButton.vue
 |- ExcludeFromSearchInput.vue
 |- LaunchOnStartupCheckbox.vue
@@ -799,7 +828,7 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 |- TermsCheckbox.vue</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-12"><a href="#Good-12" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
+<h4 id="Good-13"><a href="#Good-13" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
 |- SearchButtonClear.vue
 |- SearchButtonRun.vue
 |- SearchInputQuery.vue
@@ -811,13 +840,13 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 <p>Components that self-close communicate that they not only have no content, but are <strong>meant</strong> to have no content. It’s the difference between a blank page in a book and one labeled “This page intentionally left blank.” Your code is also cleaner without the unnecessary closing tag.</p>
 <p>Unfortunately, HTML doesn’t allow custom elements to be self-closing - only <a href="https://www.w3.org/TR/html/syntax.html#void-elements" target="_blank" rel="noopener">official “void” elements</a>. That’s why the strategy is only possible when Vue’s template compiler can reach the template before the DOM, then serve the DOM spec-compliant HTML.</p>
 <div class="style-example example-bad">
-<h4 id="Bad-13"><a href="#Bad-13" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In single-file components, string templates, and JSX --&gt;</span>
+<h4 id="Bad-14"><a href="#Bad-14" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In single-file components, string templates, and JSX --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">MyComponent</span>&gt;</span></code></pre>
 <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In DOM templates --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">my-component</span>/&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-13"><a href="#Good-13" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In single-file components, string templates, and JSX --&gt;</span>
+<h4 id="Good-14"><a href="#Good-14" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In single-file components, string templates, and JSX --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span>/&gt;</span></code></pre>
 <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In DOM templates --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span></code></pre>
@@ -832,7 +861,7 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 <p>Unfortunately, due to HTML’s case insensitivity, DOM templates must still use kebab-case.</p>
 <p>Also note that if you’ve already invested heavily in kebab-case, consistency with HTML conventions and being able to use the same casing across all your projects may be more important than the advantages listed above. In those cases, <strong>using kebab-case everywhere is also acceptable.</strong></p>
 <div class="style-example example-bad">
-<h4 id="Bad-14"><a href="#Bad-14" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In single-file components and string templates --&gt;</span>
+<h4 id="Bad-15"><a href="#Bad-15" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In single-file components and string templates --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mycomponent</span>/&gt;</span></code></pre>
 <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In single-file components and string templates --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">myComponent</span>/&gt;</span></code></pre>
@@ -840,7 +869,7 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 <span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">MyComponent</span>&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-14"><a href="#Good-14" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In single-file components and string templates --&gt;</span>
+<h4 id="Good-15"><a href="#Good-15" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In single-file components and string templates --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span>/&gt;</span></code></pre>
 <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In DOM templates --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span></code></pre>
@@ -863,7 +892,7 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 </ul>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-15"><a href="#Bad-15" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'myComponent'</span>, &#123;
+<h4 id="Bad-16"><a href="#Bad-16" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'myComponent'</span>, &#123;
   <span class="hljs-comment">// ...</span>
 &#125;)</code></pre>
 <pre><code class="hljs js"><span class="hljs-keyword">import</span> myComponent <span class="hljs-keyword">from</span> <span class="hljs-string">'./MyComponent.vue'</span></code></pre>
@@ -877,7 +906,7 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 &#125;</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-15"><a href="#Good-15" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'MyComponent'</span>, &#123;
+<h4 id="Good-16"><a href="#Good-16" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">Vue.component(<span class="hljs-string">'MyComponent'</span>, &#123;
   <span class="hljs-comment">// ...</span>
 &#125;)</code></pre>
 <pre><code class="hljs js">Vue.component(<span class="hljs-string">'my-component'</span>, &#123;
@@ -892,25 +921,25 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 <h3 id="Full-word-component-names-strongly-recommended"><a href="#Full-word-component-names-strongly-recommended" class="headerlink" title="Full-word component names strongly recommended"></a>Full-word component names <sup data-p="b">strongly recommended</sup></h3><p><strong>Component names should prefer full words over abbreviations.</strong></p>
 <p>The autocompletion in editors make the cost of writing longer names very low, while the clarity they provide is invaluable. Uncommon abbreviations, in particular, should always be avoided.</p>
 <div class="style-example example-bad">
-<h4 id="Bad-16"><a href="#Bad-16" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
+<h4 id="Bad-17"><a href="#Bad-17" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs undefined">components/
 |- SdSettings.vue
 |- UProfOpts.vue</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-16"><a href="#Good-16" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
+<h4 id="Good-17"><a href="#Good-17" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs undefined">components/
 |- StudentDashboardSettings.vue
 |- UserProfileOptions.vue</code></pre>
 </div>
 <h3 id="Prop-name-casing-strongly-recommended"><a href="#Prop-name-casing-strongly-recommended" class="headerlink" title="Prop name casing strongly recommended"></a>Prop name casing <sup data-p="b">strongly recommended</sup></h3><p><strong>Prop names should always use camelCase during declaration, but kebab-case in templates and <a href="../guide/render-function.html#JSX">JSX</a>.</strong></p>
 <p>We’re simply following the conventions of each language. Within JavaScript, camelCase is more natural. Within HTML, kebab-case is.</p>
 <div class="style-example example-bad">
-<h4 id="Bad-17"><a href="#Bad-17" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">props: &#123;
+<h4 id="Bad-18"><a href="#Bad-18" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">props: &#123;
   <span class="hljs-string">'greeting-text'</span>: <span class="hljs-built_in">String</span>
 &#125;</code></pre>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">WelcomeMessage</span> <span class="hljs-attr">greetingText</span>=<span class="hljs-string">"hi"</span>/&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-17"><a href="#Good-17" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">props: &#123;
+<h4 id="Good-18"><a href="#Good-18" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">props: &#123;
   <span class="hljs-attr">greetingText</span>: <span class="hljs-built_in">String</span>
 &#125;</code></pre>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">WelcomeMessage</span> <span class="hljs-attr">greeting-text</span>=<span class="hljs-string">"hi"</span>/&gt;</span></code></pre>
@@ -918,11 +947,11 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 <h3 id="Multi-attribute-elements-strongly-recommended"><a href="#Multi-attribute-elements-strongly-recommended" class="headerlink" title="Multi-attribute elements strongly recommended"></a>Multi-attribute elements <sup data-p="b">strongly recommended</sup></h3><p><strong>Elements with multiple attributes should span multiple lines, with one attribute per line.</strong></p>
 <p>In JavaScript, splitting objects with multiple properties over multiple lines is widely considered a good convention, because it’s much easier to read. Our templates and <a href="../guide/render-function.html#JSX">JSX</a> deserve the same consideration.</p>
 <div class="style-example example-bad">
-<h4 id="Bad-18"><a href="#Bad-18" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://vuejs.org/images/logo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Vue Logo"</span>&gt;</span></code></pre>
+<h4 id="Bad-19"><a href="#Bad-19" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://vuejs.org/images/logo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Vue Logo"</span>&gt;</span></code></pre>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span> <span class="hljs-attr">foo</span>=<span class="hljs-string">"a"</span> <span class="hljs-attr">bar</span>=<span class="hljs-string">"b"</span> <span class="hljs-attr">baz</span>=<span class="hljs-string">"c"</span>/&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-18"><a href="#Good-18" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+<h4 id="Good-19"><a href="#Good-19" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span>
   <span class="hljs-attr">src</span>=<span class="hljs-string">"https://vuejs.org/images/logo.png"</span>
   <span class="hljs-attr">alt</span>=<span class="hljs-string">"Vue Logo"</span>
 &gt;</span></code></pre>
@@ -935,14 +964,14 @@ requireComponent.keys().forEach(<span class="hljs-function"><span class="hljs-ke
 <h3 id="Simple-expressions-in-templates-strongly-recommended"><a href="#Simple-expressions-in-templates-strongly-recommended" class="headerlink" title="Simple expressions in templates strongly recommended"></a>Simple expressions in templates <sup data-p="b">strongly recommended</sup></h3><p><strong>Component templates should only include simple expressions, with more complex expressions refactored into computed properties or methods.</strong></p>
 <p>Complex expressions in your templates make them less declarative. We should strive to describe <em>what</em> should appear, not <em>how</em> we’re computing that value. Computed properties and methods also allow the code to be reused.</p>
 <div class="style-example example-bad">
-<h4 id="Bad-19"><a href="#Bad-19" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html">&#123;&#123;
+<h4 id="Bad-20"><a href="#Bad-20" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html">&#123;&#123;
   fullName.split(' ').map(function (word) &#123;
     return word[0].toUpperCase() + word.slice(1)
   &#125;).join(' ')
 &#125;&#125;</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-19"><a href="#Good-19" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In a template --&gt;</span>
+<h4 id="Good-20"><a href="#Good-20" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- In a template --&gt;</span>
 &#123;&#123; normalizedFullName &#125;&#125;</code></pre>
 <pre><code class="hljs js"><span class="hljs-comment">// The complex expression has been moved to a computed property</span>
 computed: &#123;
@@ -975,7 +1004,7 @@ computed: &#123;
 </ul>
 </details>
 <div class="style-example example-bad">
-<h4 id="Bad-20"><a href="#Bad-20" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">computed: &#123;
+<h4 id="Bad-21"><a href="#Bad-21" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js">computed: &#123;
   <span class="hljs-attr">price</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
     <span class="hljs-keyword">var</span> basePrice = <span class="hljs-keyword">this</span>.manufactureCost / (<span class="hljs-number">1</span> - <span class="hljs-keyword">this</span>.profitMargin)
     <span class="hljs-keyword">return</span> (
@@ -986,7 +1015,7 @@ computed: &#123;
 &#125;</code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-20"><a href="#Good-20" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">computed: &#123;
+<h4 id="Good-21"><a href="#Good-21" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">computed: &#123;
   <span class="hljs-attr">basePrice</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.manufactureCost / (<span class="hljs-number">1</span> - <span class="hljs-keyword">this</span>.profitMargin)
   &#125;,
@@ -1001,16 +1030,16 @@ computed: &#123;
 <h3 id="Quoted-attribute-values-strongly-recommended"><a href="#Quoted-attribute-values-strongly-recommended" class="headerlink" title="Quoted attribute values strongly recommended"></a>Quoted attribute values <sup data-p="b">strongly recommended</sup></h3><p><strong>Non-empty HTML attribute values should always be inside quotes (single or double, whichever is not used in JS).</strong></p>
 <p>While attribute values without any spaces are not required to have quotes in HTML, this practice often leads to <em>avoiding</em> spaces, making attribute values less readable.</p>
 <div class="style-example example-bad">
-<h4 id="Bad-21"><a href="#Bad-21" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">text</span>&gt;</span></code></pre>
+<h4 id="Bad-22"><a href="#Bad-22" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">text</span>&gt;</span></code></pre>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">AppSidebar</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">&#123;width:sidebarWidth+</span>'<span class="hljs-attr">px</span>'&#125;&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-21"><a href="#Good-21" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>&gt;</span></code></pre>
+<h4 id="Good-22"><a href="#Good-22" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>&gt;</span></code></pre>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">AppSidebar</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">"&#123; width: sidebarWidth + 'px' &#125;"</span>&gt;</span></code></pre>
 </div>
 <h3 id="Directive-shorthands-strongly-recommended"><a href="#Directive-shorthands-strongly-recommended" class="headerlink" title="Directive shorthands strongly recommended"></a>Directive shorthands <sup data-p="b">strongly recommended</sup></h3><p><strong>Directive shorthands (<code>:</code> for <code>v-bind:</code>, <code>@</code> for <code>v-on:</code> and <code>#</code> for <code>v-slot</code>) should be used always or never.</strong></p>
 <div class="style-example example-bad">
-<h4 id="Bad-22"><a href="#Bad-22" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+<h4 id="Bad-23"><a href="#Bad-23" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span>
   <span class="hljs-attr">v-bind:value</span>=<span class="hljs-string">"newTodoText"</span>
   <span class="hljs-attr">:placeholder</span>=<span class="hljs-string">"newTodoInstructions"</span>
 &gt;</span></code></pre>
@@ -1027,7 +1056,7 @@ computed: &#123;
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-22"><a href="#Good-22" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+<h4 id="Good-23"><a href="#Good-23" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span>
   <span class="hljs-attr">:value</span>=<span class="hljs-string">"newTodoText"</span>
   <span class="hljs-attr">:placeholder</span>=<span class="hljs-string">"newTodoInstructions"</span>
 &gt;</span></code></pre>
@@ -1201,7 +1230,7 @@ computed: &#123;
 <h3 id="Empty-lines-in-component-instance-options-recommended"><a href="#Empty-lines-in-component-instance-options-recommended" class="headerlink" title="Empty lines in component/instance options recommended"></a>Empty lines in component/instance options <sup data-p="c">recommended</sup></h3><p><strong>You may want to add one empty line between multi-line properties, particularly if the options can no longer fit on your screen without scrolling.</strong></p>
 <p>When components begin to feel cramped or difficult to read, adding spaces between multi-line properties can make them easier to skim again. In some editors, such as Vim, formatting options like this can also make them easier to navigate with the keyboard.</p>
 <div class="style-example example-good">
-<h4 id="Good-23"><a href="#Good-23" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">props: &#123;
+<h4 id="Good-24"><a href="#Good-24" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js">props: &#123;
   <span class="hljs-attr">value</span>: &#123;
     <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>,
     <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>
@@ -1250,7 +1279,7 @@ props: &#123;
 </div>
 <h3 id="Single-file-component-top-level-element-order-recommended"><a href="#Single-file-component-top-level-element-order-recommended" class="headerlink" title="Single-file component top-level element order recommended"></a>Single-file component top-level element order <sup data-p="c">recommended</sup></h3><p><strong><a href="../guide/single-file-components.html">Single-file components</a> should always order <code>&lt;script&gt;</code>, <code>&lt;template&gt;</code>, and <code>&lt;style&gt;</code> tags consistently, with <code>&lt;style&gt;</code> last, because at least one of the other two is always necessary.</strong></p>
 <div class="style-example example-bad">
-<h4 id="Bad-23"><a href="#Bad-23" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><span class="hljs-comment">/* ... */</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<h4 id="Bad-24"><a href="#Bad-24" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><span class="hljs-comment">/* ... */</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript"><span class="hljs-comment">/* ... */</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></code></pre>
 <pre><code class="hljs html"><span class="hljs-comment">&lt;!-- ComponentA.vue --&gt;</span>
@@ -1264,7 +1293,7 @@ props: &#123;
 <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><span class="hljs-comment">/* ... */</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
 </div>
 <div class="style-example example-good">
-<h4 id="Good-24"><a href="#Good-24" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- ComponentA.vue --&gt;</span>
+<h4 id="Good-25"><a href="#Good-25" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- ComponentA.vue --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript"><span class="hljs-comment">/* ... */</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><span class="hljs-comment">/* ... */</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
