@@ -33,6 +33,68 @@ Potentially dangerous patterns
 
 ## Priority A Rules: Essential (Error Prevention)
 
+### Variable naming
+
+Naming things in software development is difficult.
+
+Whether it is class names or function names, coming up with meaningful names allows the reader to infer intent at a glance.
+
+Fortunately, the naming of variables, and to some extent parameters, should not suffer from a naming choice thought process most of the time.
+
+This is because the name of the variable is built into the class/object type
+
+Variables should most likely be common nouns.
+
+If you can't use them in a sentence or using them in a sentence causes it to become complicated, then it is a bad name. E.g.
+
+* Show me the “amount” //BAD, not descriptive enough
+* Show me the “withdrawalAmount” //GOOD
+
+{% raw %}<div class="style-example example-bad">{% endraw %}
+#### Bad
+
+``` js
+var invoice = new Order();
+var list = new List<Order>();
+```
+
+``` js
+// Do not use faux abbrevitions/shortened words
+var ord = new Order(); 
+var img = new Image();
+var num = 123;
+```
+
+``` js
+var fred = new Dog();
+```
+
+``` js
+// This is an obvious sign that the method/function is way to complicated and needs to be refactored into multiple methods
+var supplimentaryBenefitOfFirstSupplimentaryBenefit = benefit.children[0].children[0];
+```
+
+``` js
+// While grammatically correct, we can probably file this under “being clever”
+var school  = new List<Fish>();
+```
+
+
+{% raw %}</div>{% endraw %}
+
+{% raw %}<div class="style-example example-good">{% endraw %}
+#### Good
+
+``` js
+var order = new Order();
+var dog = new Dog();
+```
+
+``` js
+var orders = new List<Order>();
+var people = new List<Person>();
+```
+{% raw %}</div>{% endraw %}
 
 
 ### Multi-word component names <sup data-p="a">essential</sup>
