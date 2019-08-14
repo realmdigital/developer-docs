@@ -33,7 +33,7 @@ Potentially dangerous patterns
 
 ## Priority A Rules: Essential (Error Prevention)
 
-### Variable naming
+### Variable naming <sup data-p="a">essential</sup>
 
 Naming things in software development is difficult.
 
