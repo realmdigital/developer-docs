@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
     <title>Computed Properties and Watchers — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Realm Digital - Developers Docs">
@@ -301,7 +301,7 @@
     <span>Special Sponsor</span>
     <div>
     <a href="https://stdlib.com/" target="_blank" class="logo">
-      <img src="/developer-docs/images/stdlib.png" alt="">
+      <img src="/developer-docs/images/stdlib.png" alt>
     </a>
     </div>
   </div>
@@ -1121,11 +1121,11 @@ methods: &#123;
 computed: &#123;
   <span class="hljs-attr">fullName</span>: &#123;
     <span class="hljs-comment">// getter</span>
-    get: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
+    <span class="hljs-keyword">get</span>: function () &#123;
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.firstName + <span class="hljs-string">' '</span> + <span class="hljs-keyword">this</span>.lastName
     &#125;,
     <span class="hljs-comment">// setter</span>
-    set: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newValue</span>) </span>&#123;
+    <span class="hljs-keyword">set</span>: function (newValue) &#123;
       <span class="hljs-keyword">var</span> names = newValue.split(<span class="hljs-string">' '</span>)
       <span class="hljs-keyword">this</span>.firstName = names[<span class="hljs-number">0</span>]
       <span class="hljs-keyword">this</span>.lastName = names[names.length - <span class="hljs-number">1</span>]
@@ -1147,8 +1147,8 @@ computed: &#123;
 <span class="hljs-comment">&lt;!-- and collections of general-purpose utility methods, Vue core --&gt;</span>
 <span class="hljs-comment">&lt;!-- is able to remain small by not reinventing them. This also   --&gt;</span>
 <span class="hljs-comment">&lt;!-- gives you the freedom to use what you're familiar with.      --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
 <span class="hljs-keyword">var</span> watchExampleVM = <span class="hljs-keyword">new</span> Vue(&#123;
   <span class="hljs-attr">el</span>: <span class="hljs-string">'#watch-example'</span>,

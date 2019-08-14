@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
     <title>Reactivity in Depth — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Realm Digital - Developers Docs">
@@ -301,7 +301,7 @@
     <span>Special Sponsor</span>
     <div>
     <a href="https://stdlib.com/" target="_blank" class="logo">
-      <img src="/developer-docs/images/stdlib.png" alt="">
+      <img src="/developer-docs/images/stdlib.png" alt>
     </a>
     </div>
   </div>
@@ -1038,7 +1038,7 @@ vm.b = <span class="hljs-number">2</span>
 <p>Vue does not allow dynamically adding new root-level reactive properties to an already created instance. However, it’s possible to add reactive properties to a nested object using the <code>Vue.set(object, propertyName, value)</code> method:</p>
 <pre><code class="hljs js">Vue.set(vm.someObject, <span class="hljs-string">'b'</span>, <span class="hljs-number">2</span>)</code></pre>
 <p>You can also use the <code>vm.$set</code> instance method, which is an alias to the global <code>Vue.set</code>:</p>
-<pre><code class="hljs js"><span class="hljs-keyword">this</span>.$set(<span class="hljs-keyword">this</span>.someObject, <span class="hljs-string">'b'</span>, <span class="hljs-number">2</span>)</code></pre>
+<pre><code class="hljs js"><span class="hljs-keyword">this</span>.$<span class="hljs-keyword">set</span>(this.someObject, 'b', 2)</code></pre>
 <p>Sometimes you may want to assign a number of properties to an existing object, for example using <code>Object.assign()</code> or <code>_.extend()</code>. However, new properties added to the object will not trigger changes. In such cases, create a fresh object with properties from both the original object and the mixin object:</p>
 <pre><code class="hljs js"><span class="hljs-comment">// instead of `Object.assign(this.someObject, &#123; a: 1, b: 2 &#125;)`</span>
 <span class="hljs-keyword">this</span>.someObject = <span class="hljs-built_in">Object</span>.assign(&#123;&#125;, <span class="hljs-keyword">this</span>.someObject, &#123; <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> &#125;)</code></pre>

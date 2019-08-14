@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
     <title>Enter/Leave & List Transitions — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Realm Digital - Developers Docs">
@@ -301,7 +301,7 @@
     <span>Special Sponsor</span>
     <div>
     <a href="https://stdlib.com/" target="_blank" class="logo">
-      <img src="/developer-docs/images/stdlib.png" alt="">
+      <img src="/developer-docs/images/stdlib.png" alt>
     </a>
     </div>
   </div>
@@ -1378,7 +1378,7 @@ methods: &#123;
 Velocity works very much like jQuery.animate and is
 a great option for JavaScript animations
 --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"example-4"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"show = !show"</span>&gt;</span>
@@ -1545,7 +1545,7 @@ computed: &#123;
     <button v-if="on" key="on" @click="on = false">
       on
     </button>
-    <button v-else="" key="off" @click="on = true">
+    <button v-else key="off" @click="on = true">
       off
     </button>
   </transition>
@@ -1576,7 +1576,7 @@ new Vue({
       <button v-if="on" key="on" @click="on = false">
         on
       </button>
-      <button v-else="" key="off" @click="on = true">
+      <button v-else key="off" @click="on = true">
         off
       </button>
     </transition>
@@ -1614,7 +1614,7 @@ new Vue({
       <button v-if="on" key="on" @click="on = false">
         on
       </button>
-      <button v-else="" key="off" @click="on = true">
+      <button v-else key="off" @click="on = true">
         off
       </button>
     </transition>
@@ -1667,7 +1667,7 @@ new Vue({
     <button v-if="on" key="on" @click="on = false">
       on
     </button>
-    <button v-else="" key="off" @click="on = true">
+    <button v-else key="off" @click="on = true">
       off
     </button>
   </transition>
@@ -1698,7 +1698,7 @@ new Vue({
       <button v-if="on" key="on" @click="on = false">
         on
       </button>
-      <button v-else="" key="off" @click="on = true">
+      <button v-else key="off" @click="on = true">
         off
       </button>
     </transition>
@@ -1891,7 +1891,7 @@ new Vue({
 <p>There’s one problem with this example. When you add or remove an item, the ones around it instantly snap into their new place instead of smoothly transitioning. We’ll fix that later.</p>
 <h3 id="List-Move-Transitions"><a href="#List-Move-Transitions" class="headerlink" title="List Move Transitions"></a>List Move Transitions</h3><p>The <code>&lt;transition-group&gt;</code> component has another trick up its sleeve. It can not only animate entering and leaving, but also changes in position. The only new concept you need to know to use this feature is the addition of <strong>the <code>v-move</code> class</strong>, which is added when items are changing positions. Like the other classes, its prefix will match the value of a provided <code>name</code> attribute and you can also manually specify a class with the <code>move-class</code> attribute.</p>
 <p>This class is mostly useful for specifying the transition timing and easing curve, as you’ll see below:</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"flip-list-demo"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">"shuffle"</span>&gt;</span>Shuffle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -1946,7 +1946,7 @@ new Vue({
 
 <p>This might seem like magic, but under the hood, Vue is using an animation technique called <a href="https://aerotwist.com/blog/flip-your-animations/" target="_blank" rel="noopener">FLIP</a> to smoothly transition elements from their old position to their new position using transforms.</p>
 <p>We can combine this technique with our previous implementation to animate every possible change to our list!</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"list-complete-demo"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">"shuffle"</span>&gt;</span>Shuffle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -2110,7 +2110,7 @@ new Vue({
 </style>
 
 <h3 id="Staggering-List-Transitions"><a href="#Staggering-List-Transitions" class="headerlink" title="Staggering List Transitions"></a>Staggering List Transitions</h3><p>By communicating with JavaScript transitions through data attributes, it’s also possible to stagger transitions in a list:</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"staggered-list-demo"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"query"</span>&gt;</span>
@@ -2283,7 +2283,7 @@ new Vue({
 <span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span></code></pre>
 <p>This can be useful when you’ve defined CSS transitions/animations using Vue’s transition class conventions and want to switch between them.</p>
 <p>Really though, any transition attribute can be dynamically bound. And it’s not only attributes. Since event hooks are methods, they have access to any data in the context. That means depending on the state of your component, your JavaScript transitions can behave differently.</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dynamic-fade-demo"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo"</span>&gt;</span>
   Fade In: <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"fadeInDuration"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">v-bind:max</span>=<span class="hljs-string">"maxFadeDuration"</span>&gt;</span>
@@ -2358,7 +2358,7 @@ new Vue({
     <p v-if="show">hello</p>
   </transition>
   <button v-if="stop" v-on:click="stop = false; show = false">Start animating</button>
-  <button v-else="" v-on:click="stop = true">Stop it!</button>
+  <button v-else v-on:click="stop = true">Stop it!</button>
 </div>
 <script>
 new Vue({

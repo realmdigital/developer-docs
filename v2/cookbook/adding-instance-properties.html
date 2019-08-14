@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
     <title>Adding Instance Properties — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Realm Digital - Developers Docs">
@@ -301,7 +301,7 @@
     <span>Special Sponsor</span>
     <div>
     <a href="https://stdlib.com/" target="_blank" class="logo">
-      <img src="/developer-docs/images/stdlib.png" alt="">
+      <img src="/developer-docs/images/stdlib.png" alt>
     </a>
     </div>
   </div>
@@ -505,7 +505,7 @@
 <p>It would be <code>&quot;My App&quot;</code>, then <code>&quot;The name of some other app&quot;</code>, because <code>this.appName</code> is overwritten (<a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch5.md" target="_blank" rel="noopener">sort of</a>) by <code>data</code> when the instance is created. We scope instance properties with <code>$</code> to avoid this. You can even use your own convention if you’d like, such as <code>$_appName</code> or <code>ΩappName</code>, to prevent even conflicts with plugins or future features.</p>
 <h2 id="Real-World-Example-Replacing-Vue-Resource-with-Axios"><a href="#Real-World-Example-Replacing-Vue-Resource-with-Axios" class="headerlink" title="Real-World Example: Replacing Vue Resource with Axios"></a>Real-World Example: Replacing Vue Resource with Axios</h2><p>Let’s say you’re replacing the <a href="https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4" target="_blank" rel="noopener">now-retired Vue Resource</a>. You really enjoyed accessing request methods through <code>this.$http</code> and you want to do the same thing with Axios instead.</p>
 <p>All you have to do is include axios in your project:</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"app"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>

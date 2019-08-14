@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
     <title>Avoiding Memory Leaks — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Realm Digital - Developers Docs">
@@ -301,7 +301,7 @@
     <span>Special Sponsor</span>
     <div>
     <a href="https://stdlib.com/" target="_blank" class="logo">
-      <img src="/developer-docs/images/stdlib.png" alt="">
+      <img src="/developer-docs/images/stdlib.png" alt>
     </a>
     </div>
   </div>
@@ -474,7 +474,7 @@
 <h2 id="Simple-Example"><a href="#Simple-Example" class="headerlink" title="Simple Example"></a>Simple Example</h2><p>The following example shows a memory leak caused by using the <a href="https://github.com/jshjohnson/Choices" target="_blank" rel="noopener">Choices.js</a> library in a Vue component and not properly cleaning it up. Later, we will show how to remove the Choices.js footprint and avoid the memory leak.</p>
 <p>In the example below, we load up a select with a lot of options and then we use a show/hide button with a <a href="/v2/guide/conditional.html">v-if</a> directive to add it and remove it from the virtual DOM. The problem with this example is that the <code>v-if</code> directive removes the parent element from the DOM, but we did not clean up the additional DOM pieces created by Choices.js, causing a memory leak.</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">'stylesheet prefetch'</span> <span class="hljs-attr">href</span>=<span class="hljs-string">'https://joshuajohnson.co.uk/Choices/assets/styles/css/choices.min.css?version=3.0.3'</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">'https://joshuajohnson.co.uk/Choices/assets/scripts/dist/choices.min.js?version=3.0.3'</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">'https://joshuajohnson.co.uk/Choices/assets/scripts/dist/choices.min.js?version=3.0.3'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"app"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span>

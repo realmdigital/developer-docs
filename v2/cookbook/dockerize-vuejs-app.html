@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
     <title>Dockerize Vue.js App — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Realm Digital - Developers Docs">
@@ -301,7 +301,7 @@
     <span>Special Sponsor</span>
     <div>
     <a href="https://stdlib.com/" target="_blank" class="logo">
-      <img src="/developer-docs/images/stdlib.png" alt="">
+      <img src="/developer-docs/images/stdlib.png" alt>
     </a>
     </div>
   </div>
@@ -474,23 +474,23 @@
 <pre><code class="hljs docker"><span class="hljs-keyword">FROM</span> node:lts-alpine
 
 <span class="hljs-comment"># install simple http server for serving static content</span>
-<span class="hljs-keyword">RUN</span><span class="bash"> npm install -g http-server
-</span>
+<span class="hljs-keyword">RUN</span><span class="bash"> npm install -g http-server</span>
+
 <span class="hljs-comment"># make the 'app' folder the current working directory</span>
-<span class="hljs-keyword">WORKDIR</span><span class="bash"> /app
-</span>
+<span class="hljs-keyword">WORKDIR</span><span class="bash"> /app</span>
+
 <span class="hljs-comment"># copy both 'package.json' and 'package-lock.json' (if available)</span>
-<span class="hljs-keyword">COPY</span><span class="bash"> package*.json ./
-</span>
+<span class="hljs-keyword">COPY</span><span class="bash"> package*.json ./</span>
+
 <span class="hljs-comment"># install project dependencies</span>
-<span class="hljs-keyword">RUN</span><span class="bash"> npm install
-</span>
+<span class="hljs-keyword">RUN</span><span class="bash"> npm install</span>
+
 <span class="hljs-comment"># copy project files and folders to the current working directory (i.e. 'app' folder)</span>
-<span class="hljs-keyword">COPY</span><span class="bash"> . .
-</span>
+<span class="hljs-keyword">COPY</span><span class="bash"> . .</span>
+
 <span class="hljs-comment"># build app for production with minification</span>
-<span class="hljs-keyword">RUN</span><span class="bash"> npm run build
-</span>
+<span class="hljs-keyword">RUN</span><span class="bash"> npm run build</span>
+
 <span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">8080</span>
 <span class="hljs-keyword">CMD</span><span class="bash"> [ <span class="hljs-string">"http-server"</span>, <span class="hljs-string">"dist"</span> ]</span></code></pre>
 <p>It may seem redundant to first copy <code>package.json</code> and <code>package-lock.json</code> and then all project files and folders in two separate steps but there is actually <a href="http://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/" target="_blank" rel="noopener">a very good reason for that</a> (spoiler: it allows us to take advantage of cached Docker layers).</p>
@@ -507,16 +507,16 @@
 <p>Let’s refactor our <code>Dockerfile</code> to use NGINX:</p>
  <pre><code class="hljs docker"><span class="hljs-comment"># build stage</span>
 <span class="hljs-keyword">FROM</span> node:lts-alpine as build-stage
-<span class="hljs-keyword">WORKDIR</span><span class="bash"> /app
-</span><span class="hljs-keyword">COPY</span><span class="bash"> package*.json ./
-</span><span class="hljs-keyword">RUN</span><span class="bash"> npm install
-</span><span class="hljs-keyword">COPY</span><span class="bash"> . .
-</span><span class="hljs-keyword">RUN</span><span class="bash"> npm run build
-</span>
+<span class="hljs-keyword">WORKDIR</span><span class="bash"> /app</span>
+<span class="hljs-keyword">COPY</span><span class="bash"> package*.json ./</span>
+<span class="hljs-keyword">RUN</span><span class="bash"> npm install</span>
+<span class="hljs-keyword">COPY</span><span class="bash"> . .</span>
+<span class="hljs-keyword">RUN</span><span class="bash"> npm run build</span>
+
 <span class="hljs-comment"># production stage</span>
 <span class="hljs-keyword">FROM</span> nginx:stable-alpine as production-stage
-<span class="hljs-keyword">COPY</span><span class="bash"> --from=build-stage /app/dist /usr/share/nginx/html
-</span><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">80</span>
+<span class="hljs-keyword">COPY</span><span class="bash"> --from=build-stage /app/dist /usr/share/nginx/html</span>
+<span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">80</span>
 <span class="hljs-keyword">CMD</span><span class="bash"> [<span class="hljs-string">"nginx"</span>, <span class="hljs-string">"-g"</span>, <span class="hljs-string">"daemon off;"</span>]</span></code></pre>
 <p>Ok, let’s see what’s going on here:</p>
 <ul>

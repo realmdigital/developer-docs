@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
     <title>List Rendering — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Realm Digital - Developers Docs">
@@ -301,7 +301,7 @@
     <span>Special Sponsor</span>
     <div>
     <a href="https://stdlib.com/" target="_blank" class="logo">
-      <img src="/developer-docs/images/stdlib.png" alt="">
+      <img src="/developer-docs/images/stdlib.png" alt>
     </a>
     </div>
   </div>
@@ -1220,7 +1220,7 @@ Vue.set(vm.items, indexOfItem, newValue)</code></pre>
 <pre><code class="hljs js"><span class="hljs-comment">// Array.prototype.splice</span>
 vm.items.splice(indexOfItem, <span class="hljs-number">1</span>, newValue)</code></pre>
 <p>You can also use the <a href="https://vuejs.org/v2/api/#vm-set" target="_blank" rel="noopener"><code>vm.$set</code></a> instance method, which is an alias for the global <code>Vue.set</code>:</p>
-<pre><code class="hljs js">vm.$set(vm.items, indexOfItem, newValue)</code></pre>
+<pre><code class="hljs js">vm.$<span class="hljs-keyword">set</span>(vm.items, indexOfItem, newValue)</code></pre>
 <p>To deal with caveat 2, you can use <code>splice</code>:</p>
 <pre><code class="hljs js">vm.items.splice(newLength)</code></pre>
 <h2 id="Object-Change-Detection-Caveats"><a href="#Object-Change-Detection-Caveats" class="headerlink" title="Object Change Detection Caveats"></a>Object Change Detection Caveats</h2><p>Again due to limitations of modern JavaScript, <strong>Vue cannot detect property addition or deletion</strong>. For example:</p>
@@ -1244,7 +1244,7 @@ vm.b = <span class="hljs-number">2</span>
 <p>You could add a new <code>age</code> property to the nested <code>userProfile</code> object with:</p>
 <pre><code class="hljs js">Vue.set(vm.userProfile, <span class="hljs-string">'age'</span>, <span class="hljs-number">27</span>)</code></pre>
 <p>You can also use the <code>vm.$set</code> instance method, which is an alias for the global <code>Vue.set</code>:</p>
-<pre><code class="hljs js">vm.$set(vm.userProfile, <span class="hljs-string">'age'</span>, <span class="hljs-number">27</span>)</code></pre>
+<pre><code class="hljs js">vm.$<span class="hljs-keyword">set</span>(vm.userProfile, 'age', 27)</code></pre>
 <p>Sometimes you may want to assign a number of new properties to an existing object, for example using <code>Object.assign()</code> or <code>_.extend()</code>. In such cases, you should create a fresh object with properties from both objects. So instead of:</p>
 <pre><code class="hljs js"><span class="hljs-built_in">Object</span>.assign(vm.userProfile, &#123;
   <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>,

@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
     <title>Render Functions & JSX — Vue.js</title>
     <meta charset="utf-8">
     <meta name="description" content="Realm Digital - Developers Docs">
@@ -301,7 +301,7 @@
     <span>Special Sponsor</span>
     <div>
     <a href="https://stdlib.com/" target="_blank" class="logo">
-      <img src="/developer-docs/images/stdlib.png" alt="">
+      <img src="/developer-docs/images/stdlib.png" alt>
     </a>
     </div>
   </div>
@@ -1028,25 +1028,25 @@
 <p>For the HTML above, you decide you want this component interface:</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">anchored-heading</span> <span class="hljs-attr">:level</span>=<span class="hljs-string">"1"</span>&gt;</span>Hello world!<span class="hljs-tag">&lt;/<span class="hljs-name">anchored-heading</span>&gt;</span></code></pre>
 <p>When you get started with a component that only generates a heading based on the <code>level</code> prop, you quickly arrive at this:</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/x-template"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"anchored-heading-template"</span>&gt;</span><span class="xml">
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"level === 1"</span>&gt;</span>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/x-template"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"anchored-heading-template"</span>&gt;</span><span class="javascript">
+  &lt;h1 v-<span class="hljs-keyword">if</span>=<span class="hljs-string">"level === 1"</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 3"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 4"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 4"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 5"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 5"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 6"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"level === 6"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span></span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 <pre><code class="hljs js">Vue.component(<span class="hljs-string">'anchored-heading'</span>, &#123;
   <span class="hljs-attr">template</span>: <span class="hljs-string">'#anchored-heading-template'</span>,
