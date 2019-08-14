@@ -28,16 +28,6 @@
   </div>
 </div>
 
-<div id="special-sponsor">
-  <h3>Special Sponsor</h3>
-  <% var specialSponsor = theme.special_sponsors[0]; %>
-  <a href="<%- specialSponsor.url %>" target="_blank">
-    <img src="<%- url_for(`/images/${specialSponsor.img}`) %>" style="width:160px" alt="Code.xyz Logo">
-    <br>
-    <span><%- specialSponsor.description %></span>
-  </a>
-</div>
-
 <div id="highlights">
   <div class="inner">
     <div class="point">
@@ -58,12 +48,6 @@
         Minimal Optimization Efforts
       </p>
     </div>
-  </div>
-</div>
-
-<div id="sponsors">
-  <div class="inner">
-    <%- partial('partials/sponsors') %>
   </div>
 </div>
 
@@ -127,13 +111,6 @@
 <script>
 (function () {
   var topScrolled = false
-  var sponsors = document.getElementById('sponsors')
-  var sponsorTop = sponsors.offsetTop
-  var sponsorActive = false
-
-  window.addEventListener('resize', function () {
-    sponsorTop = sponsors.offsetTop
-  })
 
   window.addEventListener('scroll', function () {
     if (window.pageYOffset > 165 && !topScrolled) {
@@ -142,17 +119,6 @@
     } else if (window.pageYOffset <= 165 && topScrolled) {
       topScrolled = false
       document.getElementById('mobile-bar').classList.add('top')
-    }
-    if (window.pageYOffset > sponsorTop - 100) {
-      if (!sponsorActive) {
-        sponsorActive = true
-        sponsors.classList.add('active')
-      }
-    } else {
-      if (sponsorActive) {
-        sponsorActive = false
-        sponsors.classList.remove('active')
-      }
     }
   })
 })()
