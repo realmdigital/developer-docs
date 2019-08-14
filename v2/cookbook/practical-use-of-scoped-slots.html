@@ -19,28 +19,28 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Practical use of scoped slots with GoogleMaps — Vue.js">
     <meta property="og:description" content="Realm Digital - Developers Docs">
-    <meta property="og:image" content="https://vuejs.org//images/logo.png">
+    <meta property="og:image" content="https://vuejs.org//developer-docs/images/logo.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Practical use of scoped slots with GoogleMaps — Vue.js">
     <meta name="twitter:description" content="Realm Digital - Developers Docs">
     <meta name="twitter:image" content="https://vuejs.org/images/logo.png">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/developer-docs/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/developer-docs/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/developer-docs/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/developer-docs/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/developer-docs/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/developer-docs/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/developer-docs/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/developer-docs/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/developer-docs/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/developer-docs/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/developer-docs/images/icons/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/developer-docs/images/icons/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/developer-docs/images/icons/favicon-192x192.png">
     <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
-    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="icon" href="/developer-docs/images/logo.png" type="image/png">
 
     <meta name="msapplication-TileColor" content="#4fc08d">
     <meta name="theme-color" content="#4fc08d">
@@ -54,10 +54,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- main page styles -->
-    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/developer-docs/css/page.css">
 
     <!-- this needs to be loaded before guide's inline scripts -->
-    <script src="/js/vue.js"></script>
+    <script src="/developer-docs/js/vue.js"></script>
     <script>
       Vue.config.productionTip = false
       window.PAGE_TYPE = "cookbook"
@@ -83,8 +83,8 @@
       <a class="logo" href="/"></a>
     </div>
     <div id="header">
-  <a id="logo" href="/">
-    <img src="/images/logo.png" alt="vue logo">
+  <a id="logo" href="/developer-docs/">
+    <img src="/developer-docs/images/logo.png" alt="vue logo">
     <span>realmdigital</span>
   </a>
   <ul id="nav">
@@ -99,11 +99,11 @@
     <li><h4>Documentation</h4></li>
     <li>
       <ul>
-        <li><a href="/v2/guide/" class="nav-link">Guide</a></li>
-        <li><a href="/v2/api/" class="nav-link">API</a></li>
-        <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
-        <li><a href="/v2/examples/" class="nav-link">Examples</a></li>
-        <li><a href="/v2/cookbook/" class="nav-link current">Cookbook</a></li>
+        <li><a href="/developer-docs/v2/guide/" class="nav-link">Guide</a></li>
+        <li><a href="/developer-docs/v2/api/" class="nav-link">API</a></li>
+        <li><a href="/developer-docs/v2/style-guide/" class="nav-link">Style Guide</a></li>
+        <li><a href="/developer-docs/v2/examples/" class="nav-link">Examples</a></li>
+        <li><a href="/developer-docs/v2/cookbook/" class="nav-link current">Cookbook</a></li>
       </ul>
     </li>
     <li><h4>Video Courses</h4></li>
@@ -159,7 +159,7 @@
 </li>
 
 <li>
-  <a href="/v2/guide/team.html" class="nav-link team">Team</a>
+  <a href="/developer-docs/v2/guide/team.html" class="nav-link team">Team</a>
 </li>
 <li class="nav-dropdown-container support-vue">
   <a href="/support-vuejs/" class="nav-link">Support Vue</a><span class="arrow"></span>
@@ -207,11 +207,11 @@
     <li><h4>Documentation</h4></li>
     <li>
       <ul>
-        <li><a href="/v2/guide/" class="nav-link">Guide</a></li>
-        <li><a href="/v2/api/" class="nav-link">API</a></li>
-        <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
-        <li><a href="/v2/examples/" class="nav-link">Examples</a></li>
-        <li><a href="/v2/cookbook/" class="nav-link current">Cookbook</a></li>
+        <li><a href="/developer-docs/v2/guide/" class="nav-link">Guide</a></li>
+        <li><a href="/developer-docs/v2/api/" class="nav-link">API</a></li>
+        <li><a href="/developer-docs/v2/style-guide/" class="nav-link">Style Guide</a></li>
+        <li><a href="/developer-docs/v2/examples/" class="nav-link">Examples</a></li>
+        <li><a href="/developer-docs/v2/cookbook/" class="nav-link current">Cookbook</a></li>
       </ul>
     </li>
     <li><h4>Video Courses</h4></li>
@@ -267,7 +267,7 @@
 </li>
 
 <li>
-  <a href="/v2/guide/team.html" class="nav-link team">Team</a>
+  <a href="/developer-docs/v2/guide/team.html" class="nav-link team">Team</a>
 </li>
 <li class="nav-dropdown-container support-vue">
   <a href="/support-vuejs/" class="nav-link">Support Vue</a><span class="arrow"></span>
@@ -301,7 +301,7 @@
     <span>Special Sponsor</span>
     <div>
     <a href="https://stdlib.com/" target="_blank" class="logo">
-      <img src="/images/stdlib.png" alt="">
+      <img src="/developer-docs/images/stdlib.png" alt="">
     </a>
     </div>
   </div>
@@ -312,20 +312,20 @@
     <span>Platinum Sponsors</span>
     <div>
     <a href="https://bit.dev/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
-      <img src="/images/bit.png" alt="Bit">
+      <img src="/developer-docs/images/bit.png" alt="Bit">
     </a>
     <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-      <img src="/images/vueschool.png" alt="VueSchool">
+      <img src="/developer-docs/images/vueschool.png" alt="VueSchool">
     </a>
     <a href="https://vehikl.com/" target="_blank" class="logo">
-      <img src="/images/vehikl.png" alt="Vehikl">
+      <img src="/developer-docs/images/vehikl.png" alt="Vehikl">
     </a>
     <a href="https://www.nativescript.org/vue?utm_source=vue-js-org&utm_medium=website&utm_campaign=nativescript-awareness" target="_blank" class="logo">
-      <img src="/images/nativescript.png" alt="NativeScript">
+      <img src="/developer-docs/images/nativescript.png" alt="NativeScript">
     </a>
     </div>
   </div>
-  <a class="become-backer" href="/support-vuejs">
+  <a class="become-backer" href="/developer-docs/support-vuejs">
     Become a Sponsor
   </a>
 </div>
@@ -342,85 +342,85 @@
     
     
     <li>
-      <a href="/v2/cookbook/index.html" class="sidebar-link">Introduction</a>
+      <a href="/developer-docs/v2/cookbook/index.html" class="sidebar-link">Introduction</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/adding-instance-properties.html" class="sidebar-link">Adding Instance Properties</a>
+      <a href="/developer-docs/v2/cookbook/adding-instance-properties.html" class="sidebar-link">Adding Instance Properties</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/form-validation.html" class="sidebar-link">Form Validation</a>
+      <a href="/developer-docs/v2/cookbook/form-validation.html" class="sidebar-link">Form Validation</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/editable-svg-icons.html" class="sidebar-link">Editable SVG Icon Systems</a>
+      <a href="/developer-docs/v2/cookbook/editable-svg-icons.html" class="sidebar-link">Editable SVG Icon Systems</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/serverless-blog.html" class="sidebar-link">Create a CMS-Powered Blog</a>
+      <a href="/developer-docs/v2/cookbook/serverless-blog.html" class="sidebar-link">Create a CMS-Powered Blog</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/unit-testing-vue-components.html" class="sidebar-link">Unit Testing Vue Components</a>
+      <a href="/developer-docs/v2/cookbook/unit-testing-vue-components.html" class="sidebar-link">Unit Testing Vue Components</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/creating-custom-scroll-directives.html" class="sidebar-link">Creating Custom Scroll Directives</a>
+      <a href="/developer-docs/v2/cookbook/creating-custom-scroll-directives.html" class="sidebar-link">Creating Custom Scroll Directives</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/debugging-in-vscode.html" class="sidebar-link">Debugging in VS Code</a>
+      <a href="/developer-docs/v2/cookbook/debugging-in-vscode.html" class="sidebar-link">Debugging in VS Code</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/using-axios-to-consume-apis.html" class="sidebar-link">Using Axios to Consume APIs</a>
+      <a href="/developer-docs/v2/cookbook/using-axios-to-consume-apis.html" class="sidebar-link">Using Axios to Consume APIs</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/avoiding-memory-leaks.html" class="sidebar-link">Avoiding Memory Leaks</a>
+      <a href="/developer-docs/v2/cookbook/avoiding-memory-leaks.html" class="sidebar-link">Avoiding Memory Leaks</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/client-side-storage.html" class="sidebar-link">Client-Side Storage</a>
+      <a href="/developer-docs/v2/cookbook/client-side-storage.html" class="sidebar-link">Client-Side Storage</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/packaging-sfc-for-npm.html" class="sidebar-link">Packaging Vue Components for npm</a>
+      <a href="/developer-docs/v2/cookbook/packaging-sfc-for-npm.html" class="sidebar-link">Packaging Vue Components for npm</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/dockerize-vuejs-app.html" class="sidebar-link">Dockerize Vue.js App</a>
+      <a href="/developer-docs/v2/cookbook/dockerize-vuejs-app.html" class="sidebar-link">Dockerize Vue.js App</a>
     </li>
   
     
     
     <li>
-      <a href="/v2/cookbook/practical-use-of-scoped-slots.html" class="sidebar-link current">Practical use of scoped slots with GoogleMaps</a>
+      <a href="/developer-docs/v2/cookbook/practical-use-of-scoped-slots.html" class="sidebar-link current">Practical use of scoped slots with GoogleMaps</a>
     </li>
   
 </ul>
@@ -435,20 +435,20 @@
     <span>Platinum Sponsors</span>
     <div>
     <a href="https://bit.dev/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank" class="logo">
-      <img src="/images/bit.png" alt="Bit">
+      <img src="/developer-docs/images/bit.png" alt="Bit">
     </a>
     <a href="https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1" target="_blank" class="logo">
-      <img src="/images/vueschool.png" alt="VueSchool">
+      <img src="/developer-docs/images/vueschool.png" alt="VueSchool">
     </a>
     <a href="https://vehikl.com/" target="_blank" class="logo">
-      <img src="/images/vehikl.png" alt="Vehikl">
+      <img src="/developer-docs/images/vehikl.png" alt="Vehikl">
     </a>
     <a href="https://www.nativescript.org/vue?utm_source=vue-js-org&utm_medium=website&utm_campaign=nativescript-awareness" target="_blank" class="logo">
-      <img src="/images/nativescript.png" alt="NativeScript">
+      <img src="/developer-docs/images/nativescript.png" alt="NativeScript">
     </a>
     </div>
   </div>
-  <a class="become-backer" href="/support-vuejs">
+  <a class="become-backer" href="/developer-docs/support-vuejs">
     Become a Sponsor
   </a>
 </div>
@@ -778,16 +778,16 @@ _bsa.init('custom', 'CKYD62QM', 'placement:vuejsorg',
 
         
       </div>
-      <script src="/js/smooth-scroll.min.js"></script>
+      <script src="/developer-docs/js/smooth-scroll.min.js"></script>
     
 
     <!-- main custom script for sidebars, version selects etc. -->
-    <script src="/js/css.escape.js"></script>
-    <script src="/js/common.js"></script>
+    <script src="/developer-docs/js/css.escape.js"></script>
+    <script src="/developer-docs/js/common.js"></script>
 
     <!-- search -->
     <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/css/search.css">
+    <link rel="stylesheet" href="/developer-docs/css/search.css">
     <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
     <script>
     [
