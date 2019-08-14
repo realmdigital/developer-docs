@@ -26,6 +26,10 @@ Where multiple, equally good options exist, an arbitrary choice can be made to e
 2. be able to copy and paste most community code examples without modification
 3. often find new hires are already accustomed to your preferred coding style, at least in regards to Vue
 
+### Priority D: Use with Caution
+
+Potentially dangerous patterns
+
 
 ## Priority A Rules: Essential (Error Prevention)
 
