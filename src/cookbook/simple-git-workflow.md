@@ -36,7 +36,7 @@ $ git pull origin develop // (DO THIS EVERY DAY - Pull latest copy from server, 
 Try NOT sit on the same branch for a long time. 
 
 ### When ready to "finish your work"
-* Create PUll request  
+* Create Pull request  
 * Wait for 2 people to approve, and make changes if necessary
 
 #### After code review
