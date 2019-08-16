@@ -6,7 +6,7 @@ const request = require('request')
 const execSync = require('child_process').execSync
 
 const themeconfPath = 'themes/vue/_config.yml'
-const installPath = 'src/v2/guide/installation.md'
+const installPath = 'src/guide/installation.md'
 const themeconfig = fs.readFileSync(themeconfPath, 'utf-8')
 const installation = fs.readFileSync(installPath, 'utf-8')
 
