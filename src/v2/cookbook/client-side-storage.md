@@ -1,7 +1,7 @@
 ---
 title: Client-Side Storage
 type: cookbook
-order: 11
+order: 1
 ---
 
 ## Base Example
