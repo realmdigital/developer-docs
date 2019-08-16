@@ -136,8 +136,7 @@ offline:
         origin: maxcdn.bootstrapcdn.com
 
 # Deployment
-## Docs: http://zespia.tw/hexo/docs/deployment.html
-deploy:
+## Docs: http://zespia.tw/hexo/docs/deployment.htmldeploy:
   type: git
   repository: git@github.com:realmdigital/developer-docs.git
 
@@ -177,14 +176,3 @@ alias:
   guide/transitioning-state.html: v2/guide/transitioning-state.html
   guide/transitions.html: v2/guide/transitions.html
   guide/unit-testing.html: v2/guide/unit-testing.html
-  examples/commits.html: v2/examples/commits.html
-  examples/elastic-header.html: v2/examples/elastic-header.html
-  examples/firebase.html: v2/examples/firebase.html
-  examples/grid-component.html: v2/examples/grid-component.html
-  examples/hackernews.html: v2/examples/hackernews.html
-  examples/index.html: v2/examples/index.html
-  examples/modal.html: v2/examples/modal.html
-  examples/select2.html: v2/examples/select2.html
-  examples/svg.html: v2/examples/svg.html
-  examples/todomvc.html: v2/examples/todomvc.html
-  examples/tree-view.html: v2/examples/tree-view.html

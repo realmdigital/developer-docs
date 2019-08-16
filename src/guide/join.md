@@ -1,5 +1,5 @@
 ---
-title: Join the Vue.js Community!
+title: Join the Realm Digital Team!
 type: guide
 order: 802
 ---
