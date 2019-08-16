@@ -263,25 +263,25 @@
 <pre><code class="hljs docker"><span class="hljs-keyword">FROM</span> node:lts-alpine
 
 <span class="hljs-comment"># install simple http server for serving static content</span>
-<span class="hljs-keyword">RUN</span><span class="bash"> npm install -g http-server</span>
+<span class="hljs-keyword">RUN</span> npm install -g http-server
 
 <span class="hljs-comment"># make the 'app' folder the current working directory</span>
-<span class="hljs-keyword">WORKDIR</span><span class="bash"> /app</span>
+<span class="hljs-keyword">WORKDIR</span> /app
 
 <span class="hljs-comment"># copy both 'package.json' and 'package-lock.json' (if available)</span>
-<span class="hljs-keyword">COPY</span><span class="bash"> package*.json ./</span>
+<span class="hljs-keyword">COPY</span> package*.json ./
 
 <span class="hljs-comment"># install project dependencies</span>
-<span class="hljs-keyword">RUN</span><span class="bash"> npm install</span>
+<span class="hljs-keyword">RUN</span> npm install
 
 <span class="hljs-comment"># copy project files and folders to the current working directory (i.e. 'app' folder)</span>
-<span class="hljs-keyword">COPY</span><span class="bash"> . .</span>
+<span class="hljs-keyword">COPY</span> . .
 
 <span class="hljs-comment"># build app for production with minification</span>
-<span class="hljs-keyword">RUN</span><span class="bash"> npm run build</span>
+<span class="hljs-keyword">RUN</span> npm run build
 
 <span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">8080</span>
-<span class="hljs-keyword">CMD</span><span class="bash"> [ <span class="hljs-string">"http-server"</span>, <span class="hljs-string">"dist"</span> ]</span></code></pre>
+<span class="hljs-keyword">CMD</span> [ "http-server", "dist" ]</code></pre>
 <p>It may seem redundant to first copy <code>package.json</code> and <code>package-lock.json</code> and then all project files and folders in two separate steps but there is actually <a href="http://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/" target="_blank" rel="noopener">a very good reason for that</a> (spoiler: it allows us to take advantage of cached Docker layers).</p>
 <p>Now let’s build the Docker image of our Vue.js app:</p>
 <pre><code class="hljs bash">docker build -t vuejs-cookbook/dockerize-vuejs-app .</code></pre>
