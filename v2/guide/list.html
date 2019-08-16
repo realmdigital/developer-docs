@@ -101,7 +101,7 @@
       <ul>
 <!--        <li><a href="/v2/guide/" class="nav-link current">Guide</a></li>
         <li><a href="/v2/api/" class="nav-link">API</a></li>-->
-        <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+        <li><a href="/style-guide/" class="nav-link">Style Guide</a></li>
 <!--        <li><a href="/v2/examples/" class="nav-link">Examples</a></li>
         <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>-->
       </ul>
@@ -136,7 +136,7 @@
       <ul>
 <!--        <li><a href="/v2/guide/" class="nav-link current">Guide</a></li>
         <li><a href="/v2/api/" class="nav-link">API</a></li>-->
-        <li><a href="/v2/style-guide/" class="nav-link">Style Guide</a></li>
+        <li><a href="/style-guide/" class="nav-link">Style Guide</a></li>
 <!--        <li><a href="/v2/examples/" class="nav-link">Examples</a></li>
         <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>-->
       </ul>
@@ -1089,7 +1089,7 @@ vm.b = <span class="hljs-number">2</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divider"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
-<h2 id="v-for-with-v-if"><a href="#v-for-with-v-if" class="headerlink" title="v-for with v-if"></a><code>v-for</code> with <code>v-if</code></h2><p class="tip">Note that it’s <strong>not</strong> recommended to use <code>v-if</code> and <code>v-for</code> together. Refer to <a href="/v2/style-guide/#Avoid-v-if-with-v-for-essential">style guide</a> for details.</p>
+<h2 id="v-for-with-v-if"><a href="#v-for-with-v-if" class="headerlink" title="v-for with v-if"></a><code>v-for</code> with <code>v-if</code></h2><p class="tip">Note that it’s <strong>not</strong> recommended to use <code>v-if</code> and <code>v-for</code> together. Refer to <a href="/style-guide/#Avoid-v-if-with-v-for-essential">style guide</a> for details.</p>
 
 <p>When they exist on the same node, <code>v-for</code> has a higher priority than <code>v-if</code>. That means the <code>v-if</code> will be run on each iteration of the loop separately. This can be useful when you want to render nodes for only <em>some</em> items, like below:</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"todo in todos"</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"!todo.isComplete"</span>&gt;</span>
