@@ -102,8 +102,9 @@
 <!--        <li><a href="/v2/guide/" class="nav-link">Guide</a></li>
         <li><a href="/v2/api/" class="nav-link">API</a></li>-->
         <li><a href="/style-guide/" class="nav-link">Style Guide</a></li>
+        <li><a href="/cookbook/" class="nav-link">Cookbook</a></li>-->
 <!--        <li><a href="/v2/examples/" class="nav-link">Examples</a></li>
-        <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>-->
+
       </ul>
     </li>
   </ul>
@@ -137,8 +138,9 @@
 <!--        <li><a href="/v2/guide/" class="nav-link">Guide</a></li>
         <li><a href="/v2/api/" class="nav-link">API</a></li>-->
         <li><a href="/style-guide/" class="nav-link">Style Guide</a></li>
+        <li><a href="/cookbook/" class="nav-link">Cookbook</a></li>-->
 <!--        <li><a href="/v2/examples/" class="nav-link">Examples</a></li>
-        <li><a href="/v2/cookbook/" class="nav-link">Cookbook</a></li>-->
+
       </ul>
     </li>
   </ul>
@@ -166,7 +168,11 @@
   
     <div id="search-page">
   <form class="search-form" @submit="submit">
-    <input class="search-query" v-model="search" placeholder="Search Vue.js">
+    <input
+      class="search-query"
+      v-model="search"
+      placeholder="Search Vue.js"
+    >
     <div class="search-footer">
       <p>
         <template v-if="totalResults">
@@ -180,7 +186,11 @@
   </form>
 
   <template v-if="results.length">
-    <search-result v-for="(result, i) in results" :key="i" :result="result"></search-result>
+    <search-result
+      v-for="(result, i) in results"
+      :key="i"
+      :result="result"
+    ></search-result>
   </template>
 
   <p v-else>No results were found.</p>
@@ -378,5 +388,5 @@ function parseSearchResults(content) {
       })
     })
     </script>
-  </body>
+  </ul></li></ul></li></ul></div></body>
 </html>
