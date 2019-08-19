@@ -1,3 +1,10 @@
+---
+title: Processes
+type: processes
+---
+
+These are the official processes for Realm Digital developers.
+
 ## Version Control
 
 * Realmdigital uses git as the sole form of source code version control
