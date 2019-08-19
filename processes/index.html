@@ -194,11 +194,11 @@
 <li><a href="https://github.com/realmdigital" target="_blank" rel="noopener">https://github.com/realmdigital</a> - Github is used for hosting public git repositories</li>
 <li>Developers/3rd parties MAY NOT use private git repositories to store Realm Digital code. All code MUST be pushed to Realm Digital repositories.</li>
 </ul>
-<h2 id="Branching-Strategy"><a href="#Branching-Strategy" class="headerlink" title="Branching Strategy"></a>Branching Strategy</h2><ul>
+<h3 id="Branching-Strategy"><a href="#Branching-Strategy" class="headerlink" title="Branching Strategy"></a>Branching Strategy</h3><ul>
 <li>All projects must follow the git-flow branching strategy - Read more <a href="https://drive.google.com/a/realmdigital.co.za/open?id=1JPU1THo_QJ_aOMc8QxIskDjjYvjtzjMAmx4Hs1IeJ38" target="_blank" rel="noopener">here</a> and <a href="https://danielkummer.github.io/git-flow-cheatsheet/" target="_blank" rel="noopener">here</a></li>
 <li>All feature/bugfix/hotfix branches must be prefixed with a ticket number</li>
 </ul>
-<h2 id="Committing"><a href="#Committing" class="headerlink" title="Committing"></a>Committing</h2><ul>
+<h3 id="Committing"><a href="#Committing" class="headerlink" title="Committing"></a>Committing</h3><ul>
 <li>Developers may <strong>NOT</strong> commit directly to “develop”</li>
 <li>Developers may <strong>NOT</strong> commit directly to “master”</li>
 <li>Commits should be small groups of related changes</li>
@@ -209,15 +209,15 @@
 <li>A developer must know <strong>EXACTLY</strong> what they are committing in every commit. If you are committing debug logging, temporary files, etc, it is because you are not actively reviewing your pre-commits</li>
 <li>A developer must know <strong>EXACTLY</strong> what branch they are committing to. If you commit to the incorrect branch, this is most likely the case of you not pre-reviewing the current working branch before committing. </li>
 </ul>
-<h2 id="Pull-Requests"><a href="#Pull-Requests" class="headerlink" title="Pull Requests"></a>Pull Requests</h2><ul>
+<h3 id="Pull-Requests"><a href="#Pull-Requests" class="headerlink" title="Pull Requests"></a>Pull Requests</h3><ul>
 <li>A pull request must be created prior to merging any feature, release or hotfix branches</li>
 <li>A pull request must be approved by 2 reviewers before it can be merged</li>
 </ul>
-<h2 id="Code-Review"><a href="#Code-Review" class="headerlink" title="Code Review"></a>Code Review</h2><ul>
+<h3 id="Code-Review"><a href="#Code-Review" class="headerlink" title="Code Review"></a>Code Review</h3><ul>
 <li>It is the responsibility of every developer to review their peer’s code</li>
 <li>Treat the approving of pull requests are your personal seal of approval</li>
 </ul>
-<h2 id="Pushing-Code"><a href="#Pushing-Code" class="headerlink" title="Pushing Code"></a>Pushing Code</h2><ul>
+<h3 id="Pushing-Code"><a href="#Pushing-Code" class="headerlink" title="Pushing Code"></a>Pushing Code</h3><ul>
 <li>All code must be push daily before leaving for the day</li>
 <li>The branching strategy employed makes this seamless</li>
 </ul>
@@ -251,6 +251,35 @@
 <li>These standards are open to change through general consensus</li>
 </ul>
 <h2 id="Style-Guide"><a href="#Style-Guide" class="headerlink" title="Style Guide"></a>Style Guide</h2><p><a href="/style-guide">Read More</a></p>
+<h2 id="Local-Development-Environment"><a href="#Local-Development-Environment" class="headerlink" title="Local Development Environment"></a>Local Development Environment</h2><h3 id="Hardware-Full-time-Realm-Digital-employees-only"><a href="#Hardware-Full-time-Realm-Digital-employees-only" class="headerlink" title="Hardware (Full-time Realm Digital employees only)"></a>Hardware (Full-time Realm Digital employees only)</h3><ul>
+<li>Realmdigital will supply a laptop running Ubuntu Linux</li>
+<li>Realmdigital might supply a monitor, keyboard and mouse</li>
+<li>You are responsible for the well being of any hardware assigned to you</li>
+</ul>
+<h3 id="OS"><a href="#OS" class="headerlink" title="OS"></a>OS</h3><ul>
+<li>All developers must use a Unix based operating system (Linux, MacOS) as their daily OS</li>
+<li>Docker must be used for all local PHP development</li>
+<li>It is recommended to install local development services(nginx, MySQL, Postgres, Redis, elasticsearch, etc) using Docker</li>
+</ul>
+<h3 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h3><ul>
+<li>Developers may use any modern feature rich IDE/Editor they find most productive</li>
+<li>Realmdigital will supply a licenced copy of PHPStorm, and is the recommended IDE</li>
+</ul>
+<h3 id="Tooling"><a href="#Tooling" class="headerlink" title="Tooling"></a>Tooling</h3><ul>
+<li>The Git CLI must be favoured</li>
+<li>No out of IDE git clients may be used, except TortoiseGit on Windows</li>
+</ul>
+<h2 id="Dev-UAT-Environments"><a href="#Dev-UAT-Environments" class="headerlink" title="Dev/UAT Environments"></a>Dev/UAT Environments</h2><ul>
+<li>Every Dev/UAT site <strong>MUST</strong> have its own unique Basic Authentication credentials.<ul>
+<li>This also applies to 3rd party suppliers</li>
+<li>Use <a href="http://www.htaccesstools.com/htpasswd-generator/" target="_blank" rel="noopener">this tool</a> to make your life easier</li>
+</ul>
+</li>
+<li>These must be stored in Google Drive in the environment document(s) for that project/client.</li>
+</ul>
+<h2 id="Live-Environments"><a href="#Live-Environments" class="headerlink" title="Live Environments"></a>Live Environments</h2><ul>
+<li><strong>NO</strong> deployments may be done to live environments without the approval of the Project Owner, Project Manager or Team Leader</li>
+</ul>
 
   
   
