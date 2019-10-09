@@ -7,6 +7,22 @@ These are the official file templates for Realm Digital projects.
 
 ## Javascript General
 
+### Install prettier
+
+```shell script
+yarn add --dev prettier pretty-quick husky
+```
+
+### package.json
+
+``` json
+"husky": {
+  "hooks": {
+    "pre-commit": "pretty-quick --staged"
+  }
+}
+```
+
 ### .prettierrc
 
 ``` js
@@ -24,6 +40,29 @@ These are the official file templates for Realm Digital projects.
 ## Nuxt
 
 Includes `Javascript General`
+
+### Install lint-staged
+
+```shell script
+yarn add --dev lint-staged
+```
+
+### package.json
+
+``` json
+"lint-staged": {
+  "*.{js,vue}": [
+    "prettier --write",
+    "eslint --fix",
+    "git add"
+  ]
+},
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
+```
 
 ### .eslintrc.js
 
@@ -60,6 +99,37 @@ module.exports = {
 ```
 
 ## PHP
+
+Includes `Javascript General`
+
+### Install PHP CS Fixer
+
+```shell script
+composer require friendsofphp/php-cs-fixer --dev
+```
+
+lint-staged
+
+### package.json
+
+``` json
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
+"lint-staged": {
+  "*.php": [
+    "php ./bin/php-cs-fixer fix --config .php_cs",
+    "git add"
+  ],
+  "*.js": [
+    "prettier --write",
+    "git add"
+  ]
+}
+```
+
 
 ### .php_cs
 
