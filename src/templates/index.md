@@ -39,7 +39,7 @@ yarn add --dev prettier pretty-quick husky
 
 ## Nuxt
 
-Includes `Javascript General`
+Includes [Javascript General](#Javascript-General)
 
 ### Install lint-staged
 
@@ -100,7 +100,7 @@ module.exports = {
 
 ## PHP
 
-Includes `Javascript General`
+Includes [Javascript General](#Javascript-General)
 
 ### Install PHP CS Fixer
 
