@@ -190,7 +190,13 @@
   
   
     <p>These are the official file templates for Realm Digital projects.</p>
-<h2 id="Javascript-General"><a href="#Javascript-General" class="headerlink" title="Javascript General"></a>Javascript General</h2><h3 id="prettierrc"><a href="#prettierrc" class="headerlink" title=".prettierrc"></a>.prettierrc</h3><pre><code class="hljs js">&#123;
+<h2 id="Javascript-General"><a href="#Javascript-General" class="headerlink" title="Javascript General"></a>Javascript General</h2><h3 id="Install-prettier"><a href="#Install-prettier" class="headerlink" title="Install prettier"></a>Install prettier</h3><pre><code class="hljs shell">yarn add --dev prettier pretty-quick husky</code></pre>
+<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><pre><code class="hljs json">"husky": &#123;
+  "hooks": &#123;
+    "pre-commit": "pretty-quick --staged"
+  &#125;
+&#125;</code></pre>
+<h3 id="prettierrc"><a href="#prettierrc" class="headerlink" title=".prettierrc"></a>.prettierrc</h3><pre><code class="hljs js">&#123;
     <span class="hljs-string">"tabWidth"</span>: <span class="hljs-number">4</span>,
     <span class="hljs-string">"useTabs"</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-string">"semi"</span>: <span class="hljs-literal">false</span>,
@@ -200,6 +206,19 @@
     <span class="hljs-string">"printWidth"</span>: <span class="hljs-number">120</span>
 &#125;</code></pre>
 <h2 id="Nuxt"><a href="#Nuxt" class="headerlink" title="Nuxt"></a>Nuxt</h2><p>Includes <code>Javascript General</code></p>
+<h3 id="Install-lint-staged"><a href="#Install-lint-staged" class="headerlink" title="Install lint-staged"></a>Install lint-staged</h3><pre><code class="hljs shell">yarn add --dev lint-staged</code></pre>
+<h3 id="package-json-1"><a href="#package-json-1" class="headerlink" title="package.json"></a>package.json</h3><pre><code class="hljs json">"lint-staged": &#123;
+  "*.&#123;js,vue&#125;": [
+    "prettier --write",
+    "eslint --fix",
+    "git add"
+  ]
+&#125;,
+"husky": &#123;
+  "hooks": &#123;
+    "pre-commit": "lint-staged"
+  &#125;
+&#125;,</code></pre>
 <h3 id="eslintrc-js"><a href="#eslintrc-js" class="headerlink" title=".eslintrc.js"></a>.eslintrc.js</h3><pre><code class="hljs js"><span class="hljs-built_in">module</span>.exports = &#123;
     <span class="hljs-attr">root</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">env</span>: &#123;
@@ -229,7 +248,25 @@
         ],
     &#125;,
 &#125;</code></pre>
-<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><h3 id="php-cs"><a href="#php-cs" class="headerlink" title=".php_cs"></a>.php_cs</h3><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span>
+<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><p>Includes <code>Javascript General</code></p>
+<h3 id="Install-PHP-CS-Fixer"><a href="#Install-PHP-CS-Fixer" class="headerlink" title="Install PHP CS Fixer"></a>Install PHP CS Fixer</h3><pre><code class="hljs shell">composer require friendsofphp/php-cs-fixer --dev</code></pre>
+<p>lint-staged</p>
+<h3 id="package-json-2"><a href="#package-json-2" class="headerlink" title="package.json"></a>package.json</h3><pre><code class="hljs json">"husky": &#123;
+  "hooks": &#123;
+    "pre-commit": "lint-staged"
+  &#125;
+&#125;,
+"lint-staged": &#123;
+  "*.php": [
+    "php ./bin/php-cs-fixer fix --config .php_cs",
+    "git add"
+  ],
+  "*.js": [
+    "prettier --write",
+    "git add"
+  ]
+&#125;</code></pre>
+<h3 id="php-cs"><a href="#php-cs" class="headerlink" title=".php_cs"></a>.php_cs</h3><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span>
 
 $finder = PhpCsFixer\Finder::create()
     -&gt;in(<span class="hljs-keyword">__DIR__</span>)
