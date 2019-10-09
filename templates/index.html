@@ -3,26 +3,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head><meta name="generator" content="Hexo 3.9.0">
-    <title>Realm Digital Developer Docs</title>
+    <title>Templates — Realm Digital Developer Docs</title>
     <meta charset="utf-8">
     <meta name="description" content="Realm Digital - Developers Docs">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/2019/08/16/index/">
-    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/2019/08/16/index/">
-    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/2019/08/16/index/">
-    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/2019/08/16/index/">
-    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/2019/08/16/index/">
-    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/2019/08/16/index/">
-    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/2019/08/16/index/">
+    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/templates/index.html">
+    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/templates/index.html">
+    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/templates/index.html">
+    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/templates/index.html">
+    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/templates/index.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/templates/index.html">
+    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/templates/index.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Realm Digital Developer Docs">
+    <meta property="og:title" content="Templates — Realm Digital Developer Docs">
     <meta property="og:description" content="Realm Digital - Developers Docs">
     <meta property="og:image" content="https://developers.realmdigital.co.za//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Realm Digital Developer Docs">
+    <meta name="twitter:title" content="Templates — Realm Digital Developer Docs">
     <meta name="twitter:description" content="Realm Digital - Developers Docs">
     <meta name="twitter:image" content="https://developers.realmdigital.co.za//images/logo.png">
 
@@ -60,7 +60,7 @@
     <script src="/js/vue.js"></script>
     <script>
       Vue.config.productionTip = false
-      window.PAGE_TYPE = ""
+      window.PAGE_TYPE = "templates"
     </script>
 
     <!-- ga -->
@@ -120,12 +120,13 @@
     
       <div id="main" class="fix-sidebar">
         
-          <div class="sidebar blog">
+          
+  <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
       <li>
   <form id="search-form">
-    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
 </li>
 <li class="nav-dropdown-container learn">
@@ -151,26 +152,111 @@
 
     </ul>
     <div class="list">
-      <h2>
-        Recent Posts
-        <a href="/atom.xml" target="_blank" style="vertical-align: middle; margin-left: 5px;">
-          <img src="/images/feed.png" style="width: 15px; height: 15px;">
-        </a>
-      </h2>
-      <ul style="padding: 0;">
       
-        <li>
-          <a href="/2019/08/16/index/" class="sidebar-link current"></a>
-        </li>
+        <h2>
+          
+          Templates
+          
+            <!--<select class="version-select">
+              <option value="SELF" selected>2.x</option>
+              <option value="v1">1.0</option>
+              <option value="012">0.12</option>
+              <option value="011">0.11</option>
+            </select>-->
+          
+        </h2>
+        <ul class="menu-root">
+  
+    
+    
+    <li>
+      <a href="/templates/index.html" class="sidebar-link current">Templates</a>
+    </li>
+  
+</ul>
+
       
-      </ul>
     </div>
   </div>
 </div>
-<div class="content with-sidebar blog post">
-  <h1></h1>
-  <h4>Aug 16, 2019</h4>
+
+
+<div class="content templates with-sidebar ">
   
+    
+  
+  
+    <h1>Templates</h1>
+  
+  
+    <p>These are the official file templates for Realm Digital projects.</p>
+<h2 id="Javascript-General"><a href="#Javascript-General" class="headerlink" title="Javascript General"></a>Javascript General</h2><h3 id="prettierrc"><a href="#prettierrc" class="headerlink" title=".prettierrc"></a>.prettierrc</h3><pre><code class="hljs js">&#123;
+    <span class="hljs-string">"tabWidth"</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-string">"useTabs"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">"semi"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">"singleQuote"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">"arrowParens"</span>: <span class="hljs-string">"avoid"</span>,
+    <span class="hljs-string">"trailingComma"</span>: <span class="hljs-string">"all"</span>,
+    <span class="hljs-string">"printWidth"</span>: <span class="hljs-number">120</span>
+&#125;</code></pre>
+<h2 id="Nuxt"><a href="#Nuxt" class="headerlink" title="Nuxt"></a>Nuxt</h2><p>Includes <code>Javascript General</code></p>
+<h3 id="eslintrc-js"><a href="#eslintrc-js" class="headerlink" title=".eslintrc.js"></a>.eslintrc.js</h3><pre><code class="hljs js"><span class="hljs-built_in">module</span>.exports = &#123;
+    <span class="hljs-attr">root</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">env</span>: &#123;
+        <span class="hljs-attr">browser</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">node</span>: <span class="hljs-literal">true</span>,
+    &#125;,
+    <span class="hljs-attr">parserOptions</span>: &#123;
+        <span class="hljs-attr">parser</span>: <span class="hljs-string">'babel-eslint'</span>,
+    &#125;,
+    <span class="hljs-attr">extends</span>: [<span class="hljs-string">'@nuxtjs'</span>, <span class="hljs-string">'prettier'</span>, <span class="hljs-string">'prettier/vue'</span>, <span class="hljs-string">'plugin:prettier/recommended'</span>, <span class="hljs-string">'plugin:nuxt/recommended'</span>],
+    <span class="hljs-attr">plugins</span>: [<span class="hljs-string">'prettier'</span>],
+    <span class="hljs-comment">// add your custom rules here</span>
+    rules: &#123;
+        <span class="hljs-attr">curly</span>: <span class="hljs-string">'error'</span>,
+        <span class="hljs-string">'vue/html-indent'</span>: [<span class="hljs-string">'error'</span>, <span class="hljs-number">4</span>],
+        <span class="hljs-string">'vue/html-self-closing'</span>: [
+            <span class="hljs-string">'error'</span>,
+            &#123;
+                <span class="hljs-attr">html</span>: &#123;
+                    <span class="hljs-attr">void</span>: <span class="hljs-string">'any'</span>,
+                    <span class="hljs-attr">normal</span>: <span class="hljs-string">'any'</span>,
+                    <span class="hljs-attr">component</span>: <span class="hljs-string">'always'</span>,
+                &#125;,
+                <span class="hljs-attr">svg</span>: <span class="hljs-string">'always'</span>,
+                <span class="hljs-attr">math</span>: <span class="hljs-string">'always'</span>,
+            &#125;,
+        ],
+    &#125;,
+&#125;</code></pre>
+<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><h3 id="php-cs"><a href="#php-cs" class="headerlink" title=".php_cs"></a>.php_cs</h3><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span>
+
+$finder = PhpCsFixer\Finder::create()
+    -&gt;in(<span class="hljs-keyword">__DIR__</span>)
+    -&gt;exclude([<span class="hljs-string">'bootstrap'</span>, <span class="hljs-string">'storage'</span>, <span class="hljs-string">'vendor'</span>, <span class="hljs-string">'node_modules'</span>, <span class="hljs-string">'app'</span>])
+    -&gt;name(<span class="hljs-string">'*.php'</span>)
+    -&gt;notName(<span class="hljs-string">'*.blade.php'</span>)
+    -&gt;ignoreDotFiles(<span class="hljs-keyword">true</span>)
+    -&gt;ignoreVCS(<span class="hljs-keyword">true</span>);
+
+<span class="hljs-keyword">return</span> PhpCsFixer\Config::create()
+    -&gt;setRules([
+        <span class="hljs-string">'@Symfony'</span> =&gt; <span class="hljs-keyword">true</span>,
+        <span class="hljs-string">'yoda_style'</span> =&gt; <span class="hljs-keyword">false</span>,
+        <span class="hljs-string">'array_syntax'</span> =&gt; [<span class="hljs-string">'syntax'</span> =&gt; <span class="hljs-string">'short'</span>],
+        <span class="hljs-string">'ordered_imports'</span> =&gt; [<span class="hljs-string">'sortAlgorithm'</span> =&gt; <span class="hljs-string">'alpha'</span>],
+        <span class="hljs-string">'no_unused_imports'</span> =&gt; <span class="hljs-keyword">true</span>,
+    ])
+    -&gt;setFinder($finder);</code></pre>
+
+  
+  
+  <div class="footer">
+    Caught a mistake or want to contribute to the documentation?
+    <a href="https://github.com/realmdigital/developer-docs/blob/master/src/templates/index.md" target="_blank">
+      Edit this page on GitHub!
+    </a>
+  </div>
 </div>
 
         
