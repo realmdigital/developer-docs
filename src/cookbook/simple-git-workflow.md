@@ -13,14 +13,15 @@ $ git config --global user.name "Your Name"
 Before you start working on a project you must issue the following command ONCE per project.  
 ```shell script
 // This initializes git-flow for this project
-$ git-flow init -d
+$ git flow init -d
 ```
 ## Every time you want to do some work on a project
 ```shell script
 // get latest code from server
+$ git checkout develop
 $ git pull
 // create your own branch, no spaces
-$ git-flow feature start MY_FEATURE  
+$ git flow feature start MY_FEATURE  
 ```
 Make your changes......  
 Dont work on the same branch all the time.  
@@ -42,7 +43,7 @@ Try NOT sit on the same branch for a long time.
 #### After code review
 ```shell script
 // finish your work, and merge back into develop [locally]
-$ git-flow feature finish MY_FEATURE 
+$ git flow feature finish MY_FEATURE 
 // push your locally merged develop branch to the server  
 $ git push
 ```
