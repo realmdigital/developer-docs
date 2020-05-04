@@ -188,28 +188,28 @@
     <h1>Simple Git Workflow</h1>
   
   
-    <h2 id="Very-beginning-only-once"><a href="#Very-beginning-only-once" class="headerlink" title="Very beginning (only once)"></a>Very beginning (only once)</h2><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git config --global user.email <span class="hljs-string">"yourname@realmdigital.co.za"</span>  </span>
-<span class="hljs-meta">$</span><span class="bash"> git config --global user.name <span class="hljs-string">"Your Name"</span></span></code></pre>
+    <h2 id="Very-beginning-only-once"><a href="#Very-beginning-only-once" class="headerlink" title="Very beginning (only once)"></a>Very beginning (only once)</h2><pre><code class="hljs shell"><span class="hljs-meta">$</span> git config --global user.email "yourname@realmdigital.co.za"  
+<span class="hljs-meta">$</span> git config --global user.name "Your Name"</code></pre>
 <h2 id="Git-procedures-per-project-once-only"><a href="#Git-procedures-per-project-once-only" class="headerlink" title="Git procedures (per project, once only)"></a>Git procedures (per project, once only)</h2><p>Before you start working on a project you must issue the following command ONCE per project.<br><pre><code class="hljs shell">// This initializes git-flow for this project
-<span class="hljs-meta">$</span><span class="bash"> git flow init -d</span></code></pre></p>
+<span class="hljs-meta">$</span> git flow init -d</code></pre></p>
 <h2 id="Every-time-you-want-to-do-some-work-on-a-project"><a href="#Every-time-you-want-to-do-some-work-on-a-project" class="headerlink" title="Every time you want to do some work on a project"></a>Every time you want to do some work on a project</h2><pre><code class="hljs shell">// get latest code from server
-<span class="hljs-meta">$</span><span class="bash"> git checkout develop</span>
-<span class="hljs-meta">$</span><span class="bash"> git pull</span>
+<span class="hljs-meta">$</span> git checkout develop
+<span class="hljs-meta">$</span> git pull
 // create your own branch, no spaces
-<span class="hljs-meta">$</span><span class="bash"> git flow feature start MY_FEATURE</span></code></pre>
+<span class="hljs-meta">$</span> git flow feature start MY_FEATURE</code></pre>
 <p>Make your changes……<br>Dont work on the same branch all the time.<br>Keep it small to enable easy reviews and avoid code conflicts.  </p>
-<h3 id="Saving-your-work"><a href="#Saving-your-work" class="headerlink" title="Saving your work"></a>Saving your work</h3><h4 id="Per-unit-of-work-done"><a href="#Per-unit-of-work-done" class="headerlink" title="Per unit of work done"></a>Per unit of work done</h4><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git add .</span>
-<span class="hljs-meta">$</span><span class="bash"> git commit -m <span class="hljs-string">"commit message"</span></span>
-<span class="hljs-meta">$</span><span class="bash"> git pull origin develop // (DO THIS EVERY DAY - Pull latest copy from server, and merge it with your code, so you have all changes here)</span></code></pre>
+<h3 id="Saving-your-work"><a href="#Saving-your-work" class="headerlink" title="Saving your work"></a>Saving your work</h3><h4 id="Per-unit-of-work-done"><a href="#Per-unit-of-work-done" class="headerlink" title="Per unit of work done"></a>Per unit of work done</h4><pre><code class="hljs shell"><span class="hljs-meta">$</span> git add .
+<span class="hljs-meta">$</span> git commit -m "commit message"
+<span class="hljs-meta">$</span> git pull origin develop // (DO THIS EVERY DAY - Pull latest copy from server, and merge it with your code, so you have all changes here)</code></pre>
 <p>Try NOT sit on the same branch for a long time. </p>
 <h3 id="When-ready-to-“finish-your-work”"><a href="#When-ready-to-“finish-your-work”" class="headerlink" title="When ready to “finish your work”"></a>When ready to “finish your work”</h3><ul>
 <li>Create Pull request  </li>
 <li>Wait for 2 people to approve, and make changes if necessary</li>
 </ul>
 <h4 id="After-code-review"><a href="#After-code-review" class="headerlink" title="After code review"></a>After code review</h4><pre><code class="hljs shell">// finish your work, and merge back into develop [locally]
-<span class="hljs-meta">$</span><span class="bash"> git flow feature finish MY_FEATURE </span>
+<span class="hljs-meta">$</span> git flow feature finish MY_FEATURE 
 // push your locally merged develop branch to the server  
-<span class="hljs-meta">$</span><span class="bash"> git push</span></code></pre>
+<span class="hljs-meta">$</span> git push</code></pre>
 
   
   
