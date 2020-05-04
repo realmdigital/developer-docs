@@ -5,6 +5,9 @@ type: processes
 
 These are the official processes for Realm Digital developers.
 
+## Planning
+
+
 ## Version Control
 
 * Realmdigital uses git as the sole form of source code version control
@@ -28,7 +31,7 @@ These are the official processes for Realm Digital developers.
 * The secondary purpose of commit messages is help with reading the code’s history
 * The primary purpose of commit messages is to make the sure developer is actively thinking about the work they are doing, and what this commit actually contains
 * A developer must know **EXACTLY** what they are committing in every commit. If you are committing debug logging, temporary files, etc, it is because you are not actively reviewing your pre-commits
-* A developer must know **EXACTLY** what branch they are committing to. If you commit to the incorrect branch, this is most likely the case of you not pre-reviewing the current working branch before committing. 
+* A developer must know **EXACTLY** what branch they are committing to. If you commit to the incorrect branch, this is most likely the case of you not pre-reviewing the current working branch before committing.
 
 ### Pull Requests
 
@@ -38,7 +41,8 @@ These are the official processes for Realm Digital developers.
 ### Code Review
 
 * It is the responsibility of every developer to review their peer’s code
-* Treat the approving of pull requests are your personal seal of approval
+* Treat the approving of pull requests as your personal seal of approval
+* It is the responsibility of the developer to ensure that their pull request is reviewed
 
 ### Pushing Code
 
@@ -47,11 +51,11 @@ These are the official processes for Realm Digital developers.
 
 ## Environment - Branch Mapping
 
-Unless otherwise agreed, and in very special, clearly defined circumstances, the following maps which Git branches are deployed to which environment. 
+Unless otherwise agreed, and in very special, clearly defined circumstances, the following maps which Git branches are deployed to which environment.
 
 |                 |         |           |            |
 |-----------------|:-------:| ---------:|-----------:|
-| **Environment** | Dev     | UAT       | Production | 
+| **Environment** | Dev     | UAT       | Production |
 | **Git Branch**  | develop | release/* | master     |
 
 ## Coding Standards
@@ -62,6 +66,8 @@ Unless otherwise agreed, and in very special, clearly defined circumstances, the
 ## Style Guide
 
 [Read More](/style-guide)
+
+[Read More here too](https://docs.google.com/document/d/1dumj6V6fGEbFhbmZiKoDM8My7kiGwN5RGiC-cWCbht8/edit#heading=h.al4m06g6xmm)
 
 ## Local Development Environment
 
