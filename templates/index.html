@@ -190,12 +190,18 @@
   
   
     <p>These are the official file templates for Realm Digital projects.</p>
-<h2 id="Javascript-General"><a href="#Javascript-General" class="headerlink" title="Javascript General"></a>Javascript General</h2><h3 id="Install-prettier"><a href="#Install-prettier" class="headerlink" title="Install prettier"></a>Install prettier</h3><pre><code class="hljs shell">yarn add --dev prettier pretty-quick husky</code></pre>
-<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><pre><code class="hljs json">"husky": &#123;
+<h2 id="Javascript-General"><a href="#Javascript-General" class="headerlink" title="Javascript General"></a>Javascript General</h2><h3 id="Install-prettier"><a href="#Install-prettier" class="headerlink" title="Install prettier"></a>Install prettier</h3><pre><code class="hljs shell">yarn add --dev prettier husky lint-staged</code></pre>
+<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><pre><code class="hljs json">"lint-staged": &#123;
+  "*.&#123;js&#125;": [
+    "prettier --write",
+    "git add"
+  ]
+&#125;,
+"husky": &#123;
   "hooks": &#123;
-    "pre-commit": "pretty-quick --staged"
+    "pre-commit": "lint-staged"
   &#125;
-&#125;</code></pre>
+&#125;,</code></pre>
 <h3 id="prettierrc"><a href="#prettierrc" class="headerlink" title=".prettierrc"></a>.prettierrc</h3><pre><code class="hljs js">&#123;
     <span class="hljs-string">"tabWidth"</span>: <span class="hljs-number">4</span>,
     <span class="hljs-string">"useTabs"</span>: <span class="hljs-literal">false</span>,
