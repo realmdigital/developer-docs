@@ -10,17 +10,23 @@ These are the official file templates for Realm Digital projects.
 ### Install prettier
 
 ```shell script
-yarn add --dev prettier pretty-quick husky
+yarn add --dev prettier husky lint-staged
 ```
 
 ### package.json
 
 ``` json
+"lint-staged": {
+  "*.{js}": [
+    "prettier --write",
+    "git add"
+  ]
+},
 "husky": {
   "hooks": {
-    "pre-commit": "pretty-quick --staged"
+    "pre-commit": "lint-staged"
   }
-}
+},
 ```
 
 ### .prettierrc
