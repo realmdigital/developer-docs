@@ -13,7 +13,7 @@ These are the official processes for Realm Digital developers.
 * Realmdigital uses git as the sole form of source code version control
 * https://bitbucket.org/realmdigital - Bitbucket is used for hosting private git repositories
 * https://github.com/realmdigital - Github is used for hosting public git repositories
-* Developers/3rd parties MAY NOT use private git repositories to store Realm Digital code. All code MUST be pushed to Realm Digital repositories.
+* Developers/3rd parties **MAY NOT** use personal git repositories to store Realm Digital code. All code **MUST** be pushed to Realm Digital repositories.
 
 
 ### Branching Strategy
@@ -73,7 +73,7 @@ Unless otherwise agreed, and in very special, clearly defined circumstances, the
 
 ### Debugging
 
-* A debugger must be used by all developers on all projects
+* A debugger **MUST** be used by all developers on all projects
 * A debugger means a tool that, at minimum, allows you to:
   - set breakpoints in code
   - pause at said breakpoints
