@@ -71,6 +71,15 @@ Unless otherwise agreed, and in very special, clearly defined circumstances, the
 
 ## Local Development Environment
 
+### Debugging
+
+* A debugger must be used by all developers on all projects
+* A debugger means a tool that, at minimum, allows you to:
+  - set breakpoints in code
+  - pause at said breakpoints
+  - step over, step into, continue, etc at said breakpoints
+  - view/inspect the current scope and variable values
+
 ### Hardware (Full-time Realm Digital employees only)
 
 * Realmdigital will supply a laptop running Ubuntu Linux
