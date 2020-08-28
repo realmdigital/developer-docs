@@ -60,7 +60,7 @@ var list = new List<Order>();
 
 ``` js
 // Do not use faux abbrevitions/shortened words
-var ord = new Order(); 
+var ord = new Order();
 var img = new Image();
 var num = 123;
 ```
@@ -96,7 +96,51 @@ var people = new List<Person>();
 ```
 {% raw %}</div>{% endraw %}
 
+### Magic strings & numbers <sup data-p="a">essential</sup>
 
+Magic strings and numbers are values used in the middle of code blocks that require a certain amount of domain knowledge and context to understand what exactly they are and what they are used for
+
+{% raw %}<div class="style-example example-bad">{% endraw %}
+#### Bad
+
+``` js
+const hours = 15;
+const minutes = hours * 60
+```
+
+``` js
+if (product.type === 'ebook') {
+   // code
+}
+```
+
+{% raw %}</div>{% endraw %}
+
+{% raw %}<div class="style-example example-good">{% endraw %}
+#### Good
+
+``` js
+// potentially in some reusuable common helper file / library
+const MINUTES_IN_AN_HOUR = 60;
+
+// in your code
+const hours = 15;
+const minutes = hours * MINUTES_IN_AN_HOUR;
+```
+
+``` js
+
+// potentially in some reusuable common helper file / library
+const PRODUCT_TYPE_EBOOK = 'ebook';
+
+// in your code
+
+if (product.type === PRODUCT_TYPE_EBOOK) {
+   // code
+}
+```
+
+{% raw %}</div>{% endraw %}
 
 ## Priority B Rules: Strongly Recommended (Improving Readability)
 
