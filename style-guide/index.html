@@ -201,7 +201,7 @@
 <h4 id="Bad"><a href="#Bad" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js"><span class="hljs-keyword">var</span> invoice = <span class="hljs-keyword">new</span> Order();
 <span class="hljs-keyword">var</span> list = <span class="hljs-keyword">new</span> List&lt;Order&gt;();</code></pre>
 <pre><code class="hljs js"><span class="hljs-comment">// Do not use faux abbrevitions/shortened words</span>
-<span class="hljs-keyword">var</span> ord = <span class="hljs-keyword">new</span> Order(); 
+<span class="hljs-keyword">var</span> ord = <span class="hljs-keyword">new</span> Order();
 <span class="hljs-keyword">var</span> img = <span class="hljs-keyword">new</span> Image();
 <span class="hljs-keyword">var</span> num = <span class="hljs-number">123</span>;</code></pre>
 <pre><code class="hljs js"><span class="hljs-keyword">var</span> fred = <span class="hljs-keyword">new</span> Dog();</code></pre>
@@ -215,6 +215,31 @@
 <span class="hljs-keyword">var</span> dog = <span class="hljs-keyword">new</span> Dog();</code></pre>
 <pre><code class="hljs js"><span class="hljs-keyword">var</span> orders = <span class="hljs-keyword">new</span> List&lt;Order&gt;();
 <span class="hljs-keyword">var</span> people = <span class="hljs-keyword">new</span> List&lt;Person&gt;();</code></pre>
+</div>
+<h3 id="Magic-strings-amp-numbers-amp-other-primitives-essential"><a href="#Magic-strings-amp-numbers-amp-other-primitives-essential" class="headerlink" title="Magic strings &amp; numbers &amp; other primitives essential"></a>Magic strings &amp; numbers &amp; other primitives <sup data-p="a">essential</sup></h3><p>Magic strings and numbers are values used in the middle of code blocks that require a certain amount of domain knowledge and context to understand what exactly they are and what they are used for</p>
+<div class="style-example example-bad">
+<h4 id="Bad-1"><a href="#Bad-1" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js"><span class="hljs-keyword">const</span> hours = <span class="hljs-number">15</span>;
+<span class="hljs-keyword">const</span> minutes = hours * <span class="hljs-number">60</span></code></pre>
+<pre><code class="hljs js"><span class="hljs-keyword">if</span> (product.type === <span class="hljs-string">'ebook'</span>) &#123;
+   <span class="hljs-comment">// code</span>
+&#125;</code></pre>
+</div>
+<div class="style-example example-good">
+<h4 id="Good-1"><a href="#Good-1" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js"><span class="hljs-comment">// potentially in some reusuable common helper file / library</span>
+<span class="hljs-keyword">const</span> MINUTES_IN_AN_HOUR = <span class="hljs-number">60</span>;
+
+<span class="hljs-comment">// in your code</span>
+<span class="hljs-keyword">const</span> hours = <span class="hljs-number">15</span>;
+<span class="hljs-keyword">const</span> minutes = hours * MINUTES_IN_AN_HOUR;</code></pre>
+<pre><code class="hljs js">
+<span class="hljs-comment">// potentially in some reusuable common helper file / library</span>
+<span class="hljs-keyword">const</span> PRODUCT_TYPE_EBOOK = <span class="hljs-string">'ebook'</span>;
+
+<span class="hljs-comment">// in your code</span>
+
+<span class="hljs-keyword">if</span> (product.type === PRODUCT_TYPE_EBOOK) &#123;
+   <span class="hljs-comment">// code</span>
+&#125;</code></pre>
 </div>
 <h2 id="Priority-B-Rules-Strongly-Recommended-Improving-Readability"><a href="#Priority-B-Rules-Strongly-Recommended-Improving-Readability" class="headerlink" title="Priority B Rules: Strongly Recommended (Improving Readability)"></a>Priority B Rules: Strongly Recommended (Improving Readability)</h2><h2 id="Priority-C-Rules-Recommended-Minimizing-Arbitrary-Choices-and-Cognitive-Overhead"><a href="#Priority-C-Rules-Recommended-Minimizing-Arbitrary-Choices-and-Cognitive-Overhead" class="headerlink" title="Priority C Rules: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)"></a>Priority C Rules: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)</h2><h2 id="Priority-D-Rules-Use-with-Caution-Potentially-Dangerous-Patterns"><a href="#Priority-D-Rules-Use-with-Caution-Potentially-Dangerous-Patterns" class="headerlink" title="Priority D Rules: Use with Caution (Potentially Dangerous Patterns)"></a>Priority D Rules: Use with Caution (Potentially Dangerous Patterns)</h2>
 <script>
