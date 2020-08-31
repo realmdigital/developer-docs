@@ -154,6 +154,11 @@ if (!isValidOrder())
     return null;
 ```
 
+```js
+if (data) fs.writeFile('./writeFolder/foobar.txt', 'Hello World!');
+else callback(err)
+```
+
 {% raw %}</div>{% endraw %}
 
 {% raw %}<div class="style-example example-good">{% endraw %}
@@ -162,6 +167,14 @@ if (!isValidOrder())
 ``` js
 if (!isValidOrder()) {
     return null;
+}
+```
+
+```js
+if (data) {
+    fs.writeFile('./writeFolder/foobar.txt', 'Hello World!');
+} else {
+    callback(err)
 }
 ```
 
