@@ -241,6 +241,16 @@
    <span class="hljs-comment">// code</span>
 &#125;</code></pre>
 </div>
+<h3 id="Blocks-amp-curly-braces-essential"><a href="#Blocks-amp-curly-braces-essential" class="headerlink" title="Blocks &amp; curly braces essential"></a>Blocks &amp; curly braces <sup data-p="a">essential</sup></h3><p>Curly braces <code>{</code> <code>}</code> must always be used, even if there is only 1 line in the block</p>
+<div class="style-example example-bad">
+<h4 id="Bad-2"><a href="#Bad-2" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js"><span class="hljs-keyword">if</span> (!isValidOrder())
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;</code></pre>
+</div>
+<div class="style-example example-good">
+<h4 id="Good-2"><a href="#Good-2" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js"><span class="hljs-keyword">if</span> (!isValidOrder()) &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+&#125;</code></pre>
+</div>
 <h2 id="Priority-B-Rules-Strongly-Recommended-Improving-Readability"><a href="#Priority-B-Rules-Strongly-Recommended-Improving-Readability" class="headerlink" title="Priority B Rules: Strongly Recommended (Improving Readability)"></a>Priority B Rules: Strongly Recommended (Improving Readability)</h2><h2 id="Priority-C-Rules-Recommended-Minimizing-Arbitrary-Choices-and-Cognitive-Overhead"><a href="#Priority-C-Rules-Recommended-Minimizing-Arbitrary-Choices-and-Cognitive-Overhead" class="headerlink" title="Priority C Rules: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)"></a>Priority C Rules: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)</h2><h2 id="Priority-D-Rules-Use-with-Caution-Potentially-Dangerous-Patterns"><a href="#Priority-D-Rules-Use-with-Caution-Potentially-Dangerous-Patterns" class="headerlink" title="Priority D Rules: Use with Caution (Potentially Dangerous Patterns)"></a>Priority D Rules: Use with Caution (Potentially Dangerous Patterns)</h2>
 <script>
 (function () {
