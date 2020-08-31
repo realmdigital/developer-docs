@@ -12,8 +12,9 @@ These are the official processes for Realm Digital developers.
 
 * Realmdigital uses git as the sole form of source code version control
 * https://bitbucket.org/realmdigital - Bitbucket is used for hosting private git repositories
-* https://github.com/realmdigital - Github is used for hosting public git repositories
+* https://github.com/realmdigital - GitHub is used for hosting public git repositories
 * Developers/3rd parties **MAY NOT** use personal git repositories to store Realm Digital code. All code **MUST** be pushed to Realm Digital repositories.
+* All developers **SHOULD** to use SSH keys for pushing/pulling from Bitbucket/GitHub.
 
 
 ### Branching Strategy
