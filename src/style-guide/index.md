@@ -96,7 +96,7 @@ var people = new List<Person>();
 ```
 {% raw %}</div>{% endraw %}
 
-### Magic strings & numbers <sup data-p="a">essential</sup>
+### Magic strings & numbers & other primitives <sup data-p="a">essential</sup>
 
 Magic strings and numbers are values used in the middle of code blocks that require a certain amount of domain knowledge and context to understand what exactly they are and what they are used for
 
@@ -137,6 +137,31 @@ const PRODUCT_TYPE_EBOOK = 'ebook';
 
 if (product.type === PRODUCT_TYPE_EBOOK) {
    // code
+}
+```
+
+{% raw %}</div>{% endraw %}
+
+### Blocks & curly braces <sup data-p="a">essential</sup>
+
+Curly braces `{` `}` must always be used, even if there is only 1 line in the block
+
+{% raw %}<div class="style-example example-bad">{% endraw %}
+#### Bad
+
+``` js
+if (!isValidOrder())
+    return null;
+```
+
+{% raw %}</div>{% endraw %}
+
+{% raw %}<div class="style-example example-good">{% endraw %}
+#### Good
+
+``` js
+if (!isValidOrder()) {
+    return null;
 }
 ```
 
