@@ -245,10 +245,17 @@
 <div class="style-example example-bad">
 <h4 id="Bad-2"><a href="#Bad-2" class="headerlink" title="Bad"></a>Bad</h4><pre><code class="hljs js"><span class="hljs-keyword">if</span> (!isValidOrder())
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;</code></pre>
+<pre><code class="hljs js"><span class="hljs-keyword">if</span> (data) fs.writeFile(<span class="hljs-string">'./writeFolder/foobar.txt'</span>, <span class="hljs-string">'Hello World!'</span>);
+<span class="hljs-keyword">else</span> callback(err)</code></pre>
 </div>
 <div class="style-example example-good">
 <h4 id="Good-2"><a href="#Good-2" class="headerlink" title="Good"></a>Good</h4><pre><code class="hljs js"><span class="hljs-keyword">if</span> (!isValidOrder()) &#123;
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+&#125;</code></pre>
+<pre><code class="hljs js"><span class="hljs-keyword">if</span> (data) &#123;
+    fs.writeFile(<span class="hljs-string">'./writeFolder/foobar.txt'</span>, <span class="hljs-string">'Hello World!'</span>);
+&#125; <span class="hljs-keyword">else</span> &#123;
+    callback(err)
 &#125;</code></pre>
 </div>
 <h2 id="Priority-B-Rules-Strongly-Recommended-Improving-Readability"><a href="#Priority-B-Rules-Strongly-Recommended-Improving-Readability" class="headerlink" title="Priority B Rules: Strongly Recommended (Improving Readability)"></a>Priority B Rules: Strongly Recommended (Improving Readability)</h2><h2 id="Priority-C-Rules-Recommended-Minimizing-Arbitrary-Choices-and-Cognitive-Overhead"><a href="#Priority-C-Rules-Recommended-Minimizing-Arbitrary-Choices-and-Cognitive-Overhead" class="headerlink" title="Priority C Rules: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)"></a>Priority C Rules: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)</h2><h2 id="Priority-D-Rules-Use-with-Caution-Potentially-Dangerous-Patterns"><a href="#Priority-D-Rules-Use-with-Caution-Potentially-Dangerous-Patterns" class="headerlink" title="Priority D Rules: Use with Caution (Potentially Dangerous Patterns)"></a>Priority D Rules: Use with Caution (Potentially Dangerous Patterns)</h2>
