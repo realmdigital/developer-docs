@@ -20,7 +20,7 @@ These are the official processes for Realm Digital developers.
 ### Branching Strategy
 
 * All projects must follow the git-flow branching strategy - Read more [here](https://drive.google.com/a/realmdigital.co.za/open?id=1JPU1THo_QJ_aOMc8QxIskDjjYvjtzjMAmx4Hs1IeJ38) and [here](https://danielkummer.github.io/git-flow-cheatsheet/)
-* All feature/bugfix/hotfix branches must be prefixed with a ticket number
+* All feature branches must be prefixed with a ticket number
 
 ### Committing
 
