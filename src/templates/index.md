@@ -156,7 +156,7 @@ return PhpCsFixer\Config::create()
         'yoda_style' => false,
         'array_syntax' => ['syntax' => 'short'],
         'ordered_imports' => ['sortAlgorithm' => 'alpha'],
-        'no_unused_imports' => true,
+        'no_unused_imports' => true, // this might cause a problem for Silex annotations and should be disabled
     ])
     ->setFinder($finder);
 
