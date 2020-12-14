@@ -5,6 +5,33 @@ type: templates
 
 These are the official file templates for Realm Digital projects.
 
+## Project README.MD
+
+```
+# Overview
+// provide a high level project overview
+
+# Environment Prerequisites (Global)
+Prior to setting up the local development environment as outlined in this document, please ensure that your development
+environment is set up correctly as outlined in the developer onboarding document(s).
+
+# Environment Prerequisites
+// provide a list of dependencies to install on development machines
+
+# Project Configuration, Environment
+// provide a set of configuration steps relating to the environment
+
+# Project Configuration, Database
+// provide a set of configuration steps relating to the database
+
+# Project Install
+// provide a collection of commands to install project dependencies
+
+# Project Startup
+// provide a collection of commands to startup project services
+// provide a collection of URLs made available
+```
+
 ## Javascript General
 
 ### Install prettier
