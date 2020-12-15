@@ -11,10 +11,6 @@ These are the official file templates for Realm Digital projects.
 # Overview
 // provide a high level project overview
 
-# Environment Prerequisites (Global)
-Prior to setting up the local development environment as outlined in this document, please ensure that your development
-environment is set up correctly as outlined in the developer onboarding document(s).
-
 # Environment Prerequisites
 // provide a list of dependencies to install on development machines
 
