@@ -5,7 +5,9 @@ type: templates
 
 These are the official file templates for Realm Digital projects.
 
-## Project README
+## General
+
+### README.md
 
 ```
 # Overview
