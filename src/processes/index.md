@@ -44,6 +44,11 @@ These are the official processes for Realm Digital developers.
 * It is the responsibility of every developer to review their peer’s code
 * Treat the approving of pull requests as your personal seal of approval
 * It is the responsibility of the developer to ensure that their pull request is reviewed
+* It is NOT necessary to reply to every code review comment. Reply when:
+  * You disagree with a proposed change - stating your reasoning
+  * A proposed change is not going to be done
+  * Clarification on the comment is required
+  * A direct questions is being asked - sometimes a comment contains a hypothetical question e.g. "Wouldn't this be a better name?" - This is not a question requiring a response
 
 ### Pushing Code
 
