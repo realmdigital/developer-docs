@@ -11,7 +11,7 @@ $ yarn start # dev server at http://localhost:4000
 
 ## Deploying
 
-This site is deployed to GitHub Pages
+This will deploy the site to GitHub Pages
 
 ``` bash
 $ yarn deploy
